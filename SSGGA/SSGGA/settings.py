@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'myapp',
     'account',
     'cafeapp',
+    'board',
 ]
 
 MIDDLEWARE = [
