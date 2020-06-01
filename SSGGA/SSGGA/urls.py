@@ -35,5 +35,3 @@ urlpatterns = [
     path('createpost/', createpost, name="createpost"),
     path('bulletinboard_page/', bulletinboard_page, name="bulletinboard_page"),
 ]
-
-
