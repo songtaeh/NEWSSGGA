@@ -9,3 +9,7 @@ def createpost(request):
 
     context = {'take_all_post':all_post}
     return render(request, 'createpost.html', context)
+
+def bulletinboard_page(request):
+
+    return render(request, 'bulletinboard_page.html')

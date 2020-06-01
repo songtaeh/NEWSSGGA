@@ -19,7 +19,7 @@ from django.urls import path
 from myapp.views import mainpage
 from cafeapp.views import createcafe
 from account.views import register
-from board.views import createpost
+from board.views import createpost, bulletinboard_page
 from django.contrib.auth.views import LoginView, LogoutView
 
 # from django.conf.urls.static import static
@@ -33,6 +33,7 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name="login"),
     path('logout/', LogoutView.as_view(), name="logout"),
     path('createpost/', createpost, name="createpost"),
+    path('bulletinboard_page/', bulletinboard_page, name="bulletinboard_page"),
 ]
 
 
