@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체게시판</title>
+    <link rel="stylesheet" href="cafe_main.css">
+    <link rel="stylesheet" href="bulltinboard_page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="nav_bar">
+            <a href="" id="logo"><img src="../taehyeon/logo.png" alt="SSGGA"></a>
+            <div id="nav_menu">
+                <a href="" id="profile">Profile</a>
+                <a href="" id="log_out">Log Out</a>
+            </div>
+        </div>
+        
+        <a href="./cafe_main.html"><div id="main_banner">메인 배너</div></a>
+
+        <div id="content_area">
+
+            <div id="menu_group">
+                <div id="info_menu_container">
+                    <div id="my_info">
+                        <div id="my_picture">
+                            사진
+                        </div>
+                        <h3 id="nick_name">닉네임</h3>
+                    </div>
+                    <div id="my_menu_container">
+                        <div class="my_menu"><a href="">내가 쓴 글</a></div>
+                        <div class="my_menu"><a href="">댓글 단 글</a></div>
+                        <div class="my_menu"><a href="">내 스크랩</a></div>
+                    </div>
+                </div>
+                <div id="menu_container">
+                    <div class="cafe_menu">
+                        <ul id="favorite_menu"><a href="">즐겨찾는 게시판</a></ul>
+                    </div>
+                    <div class="cafe_menu">
+                        <ul><a href="">전체글보기</a></ul>
+                    </div>
+                    <div class="cafe_menu">
+                        <ul><a href="">자유게시판</a></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main_group">
+                    <div id="bulletinboard_title">
+                        전체게시판
+                    </div>
+                    
+                    <div class="bulletinboard_table">
+                        <table>
+                            <thead>
+                                <tr class="table_title">
+                                    <th class="number">번호</th>
+                                    <th class="article_title">제목</th>
+                                    <th class="writer">작성자</th>
+                                    <th class="writed_date">작성일
+                            </thead>
+                            <tbody>
+                                <tr class="content_table">
+                                    <td class="number">1</th>
+                                    <td class="article_title"><a href="">왜 파이썬은 ;를 쓰지 않나요</a></th>
+                                    <td class="writer">파이썬싫어요</th>
+                                    <td class="writed_date">2020-05-31</th>
+                                </tr>
+                                <tr class="content_table">
+                                    <td class="number">2</th>
+                                    <td class="article_title"><a href="">Django 너무 어려워요</a></th>
+                                    <td class="writer">ㅠㅜ</th>
+                                    <td class="writed_date">2020-05-31</th>
+                                </tr>
+                                <tr class="content_table">
+                                    <td class="number">3</th>
+                                    <td class="article_title">int 묻고 double로 가!</th>
+                                    <td class="writer">철용좌</th>
+                                    <td class="writed_date">2020-05-31</th>
+                                </tr>
+                                <tr class="content_table">
+                                    <td class="number">4</th>
+                                    <td class="article_title">송스윗 너무 스윗해요</th>
+                                    <td class="writer">S2</th>
+                                    <td class="writed_date">2020-05-31</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="writing_div">
+                        <a href=""><div id="writing_button">글쓰기</div></a>
+                    </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>

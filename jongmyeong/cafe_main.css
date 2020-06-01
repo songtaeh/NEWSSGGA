@@ -1,51 +1,50 @@
 .container {
     width: 1100px;
     margin: 10px auto;
+    height: auto;
 }
 
-#nav-bar {
+#nav_bar {
     height: 30px;
     /* background-color: aquamarine; */
     margin: 10px 0;
 }
 
-#logo {
-    text-decoration: none;
-    color: black;
-    font-weight: 900;
-    font-size: 20px;
+#logo img {
+    width: 100px;
 }
 
-#nav-menu {
+#nav_menu {
     float: right;
     line-height: 30px;
     vertical-align: middle;
 }
 
-#nav-menu a {
+#nav_menu a {
     text-decoration: none;
     color: black;
     padding: 0 10px;
     font-weight: 500;
 }
 
-#main-banner {
+#main_banner {
     height: 200px;
     /* background-color: aqua; */
     border: 1px solid black;
-    margin: 10px 0;
+    margin-top: 10px 0;
+    margin-bottom: 20px;
 }
 
-#content-area {
+#content_area {
     display: flex;
 }
 
-#menu-group {
+#menu_group {
     width: 200px;
     box-sizing: border-box;
 }
 
-#info-menu-container {
+#info_menu_container {
     height: 350px;
     /* background-color: yellowgreen; */
     box-sizing: border-box;
@@ -53,7 +52,7 @@
     padding: 10px 0;
 }
 
-#my-picture {
+#my_picture {
     width: 100px;
     height: 100px;
     background-color: lime;
@@ -61,21 +60,21 @@
     text-align: center;
 }
 
-#nick-name {
+#nick_name {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.my-menu {
+.my_menu {
     padding: 10px 0 10px 20px;
     border-top: solid 1px lightgray;
 }
 
-.my-menu:last-child {
+.my_menu:last-child {
     border-bottom: solid 2px gray;
 }
 
-.my-menu a {
+.my_menu a {
     text-decoration: none;
     color: black;
 }
@@ -85,18 +84,18 @@
     box-sizing: border-box;
 } */
 
-#my-menu-continer {
+#my_menu-continer {
     height: 100px;
     box-sizing: border-box;
 }
 
-#menu-container {
+#menu_container {
     /* background-color: lightgreen; */
     box-sizing: border-box;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
-.cafe-menu ul{
+.cafe_menu ul{
     margin: 0;
     padding-left: 20px;
     padding-top: 10px;
@@ -104,44 +103,46 @@
     border-top: solid 1px lightgray;
 }
 
-.cafe-menu:first-child {
+.cafe_menu:first-child {
     border-top: solid 2px gray;
 }
 
-.cafe-menu:last-child {
+.cafe_menu:last-child {
     border-bottom: solid 2px gray;
 }
 
-#favorite-menu {
+#favorite_menu {
     font-weight: bold;
 }
 
-.cafe-menu a {
+.cafe_menu a {
     text-decoration: none;
     color: black;
 }
 
-#main-group {
+#main_group {
     width: 900px;
+    margin-left: 20px;
 }
 
-#main-content {
+#main_content {
     height: 300px;
     background-color: yellow;
     box-sizing: border-box;
-    margin-left: 10px;
+   
 }
 
 #ad {
     height: 200px;
-    background-color: cyan;
-    margin-top: 10px;
-    margin-left: 10px;
+    /* background-color: cyan; */
+    margin-top: 20px;
+    background: url(./likelion_ad.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#cafe-contents {
+#cafe_contents {
     height: 200px;
     background-color: navajowhite;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 20px;
 }

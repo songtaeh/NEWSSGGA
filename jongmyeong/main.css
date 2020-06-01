@@ -3,47 +3,47 @@
     margin: 10px auto;
 }
 
-#nav-bar {
+#nav_bar {
     height: 30px;
     background-color: aquamarine;
 }
 
-#main-banner {
+#main_banner {
     height: 200px;
     background-color: aqua;
 }
 
-#content-area {
+#content_area {
     display: flex;
 }
 
-#content-area #menu-group {
+#content_area #menu_group {
     width: 200px;
     box-sizing: border-box;
 }
 
-#menu-group #my_info {
+#menu_group #my_info {
     height: 350px;
     background-color: yellowgreen;
     box-sizing: border-box;
 }
 
-#menu-group #cafe-menu {
+#menu_group #cafe_menu {
     height: 300px;
     background-color: lightgreen;
     box-sizing: border-box;
 }
 
-#main-group {
+#main_group {
     width: 900px;
 }
 
-#main-group #main-content {
+#main_group #main_content {
     height: 400px;
     background-color: yellow;
 }
 
-#main-group #all-content {
+#main_group #all_content {
     height: 250px;
     background-color: navajowhite;
 }

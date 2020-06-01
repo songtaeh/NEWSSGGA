@@ -1,39 +1,39 @@
-#main-banner {
+#main_banner {
     position: relative;
 }
 
-.setting-button {
+.setting_button {
     width: 100px;
     height: 30px;
     background-color: white;
 }
 
-#setting-banner {
+#setting_banner {
     position: absolute;
     top: 20px;
     right: 20px
 }
 
-#add-menu {
+#add_menu {
     display: block;
     margin: 20px auto;
 }
 
-#main-content {
+#main_content {
     position: relative;
 }
 
-#main-content-decorate {
+#main_content_decorate {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
-#main-group {
+#main_group {
     position: relative;
 }
 
-#change-save {
+#change_save {
     position: absolute;
     bottom: 10px;
     right: 20px;
