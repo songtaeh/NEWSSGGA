@@ -13,3 +13,6 @@ def createpost(request):
 def bulletinboard_page(request):
 
     return render(request, 'bulletinboard_page.html')
+
+def post(request):
+    return render(request, 'post.html')    

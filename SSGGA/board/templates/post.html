@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 제목</title>
+    <!-- {{Board.title}} -->
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="nav-bar">
+            <a href="" id="logo">SSG-GA</a>
+            <div id="nav-menu">
+                <a href="" id="profile">Profile</a>
+                <a href="" id="log-out">Log Out</a>
+            </div>
+        </div>
+        
+        <a href="./cafe_main.html"><div id="main-banner">메인 배너</div></a>
+
+        <div id="content-area">
+
+            <div id="menu-group">
+                <div id="info-menu-container">
+                    <div id="my-info">
+                        <div id="my-picture">
+                            사진
+                        </div>
+                        <h3 id="nick-name">닉네임</h3>
+                    </div>
+                    <div id="my-menu-container">
+                        <div class="my-menu"><a href="">내가 쓴 글</a></div>
+                        <div class="my-menu"><a href="">댓글 단 글</a></div>
+                        <div class="my-menu"><a href="">내 스크랩</a></div>
+                    </div>
+                </div>
+                <div id="menu-container">
+                    <div class="cafe-menu">
+                        <ul id="favorite-menu"><a href="">즐겨찾는 게시판</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">전체글보기</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">자유게시판</a></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main-group">
+                <div id="wrap">
+                    <div id="bulletin_title">
+                        게시판 이름
+                    </div>
+            
+                    <form action="" method="post" enctype="multipart/form-data" name="">
+            
+                        <div id="writing">
+                            <p id = "title_container">
+                                1일 3깡 하는사람?
+                                <!-- <div id = "title">제목</div> -->
+                            </p>
+                            <div id = "nickname_container">
+                                <div id="nickname">
+                                    머가리깨져도깡
+                                </div>
+                                <div id="time">
+                                    07:31 PM
+                                </div>
+                            </div>
+                            <div id = "content_container">
+                                <div id = "content">아침먹고 깡 점심먹고 깡 저녁먹고 깡 정도 해줘야 사람 살아가는 맛이지...</div>
+                            </div>
+                            <div id = "buttom">
+                                <div id ="buttom_content">
+                                    <label for="password">비밀번호: </label>
+                                    <input id="password" type="password" placeholder="●●●●">
+                                    <button id="update">수정</button>
+                                    <input id="delete" type="submit" name="submit" value="작성">
+                                </div>
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
