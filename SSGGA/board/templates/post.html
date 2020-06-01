@@ -5,8 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>글 제목</title>
-    <!-- {{Board.title}} -->
+    <title>{{Board}}</title>
     <link rel="stylesheet" href="{% static 'css/post.css' %}">
 </head>
 
@@ -62,26 +61,31 @@
             
                         <div id="writing">
                             <p id = "title_container">
-                                1일 3깡 하는사람?
+                                {{my_post.title}}
                                 <!-- <div id = "title">제목</div> -->
                             </p>
                             <div id = "nickname_container">
                                 <div id="nickname">
-                                    머가리깨져도깡
+                                    {{my_post.nickname}}
                                 </div>
                                 <div id="time">
-                                    07:31 PM
+                                    {{my_post.created_at}}
                                 </div>
                             </div>
                             <div id = "content_container">
-                                <div id = "content">아침먹고 깡 점심먹고 깡 저녁먹고 깡 정도 해줘야 사람 살아가는 맛이지...</div>
+                                <div id = "content">{{my_post.contents}}</div>
                             </div>
                             <div id = "buttom">
                                 <div id ="buttom_content">
+                                    {% if user.is_authenticated %}
+                                    <button id="update">수정</button>
+                                    <input id="delete" type="submit" name="submit" value="삭제">
+                                    {% else %}
                                     <label for="password">비밀번호: </label>
                                     <input id="password" type="password" placeholder="●●●●">
                                     <button id="update">수정</button>
-                                    <input id="delete" type="submit" name="submit" value="작성">
+                                    <input id="delete" type="submit" name="submit" value="삭제">
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>    
