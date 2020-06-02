@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from myapp.views import mainpage
 from cafeapp.views import createcafe
-from account.views import register
+from account.views import signup, update_profile
 from board.views import createpost, board, post
 from django.contrib.auth.views import LoginView, LogoutView
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 # from django.conf.urls.static import static
 # from django.conf import settings
@@ -29,10 +32,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainpage, name="mainpage"),
     path('createcafe/',createcafe, name="createcafe"),
-    path('register/', register, name="register"),
+    path('signup/', signup, name="signup"),
+    path('update_profile/', update_profile, name="update_profile"),
     path('login/', LoginView.as_view(), name="login"),
     path('logout/', LogoutView.as_view(), name="logout"),
     path('createpost/', createpost, name="createpost"),
     path('board/', board, name="board"),
     path('post/<int:post_id>', post, name="post"),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

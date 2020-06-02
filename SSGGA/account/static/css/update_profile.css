@@ -17,7 +17,7 @@ form{
     margin-top: 70px;
 }
 
-#id_ID, #id_password1, #id_password2, #id_username, #id_gender, #id_phone{
+.pf_item{
     width: 99%;
     height: 35px;
     margin: 10px auto;

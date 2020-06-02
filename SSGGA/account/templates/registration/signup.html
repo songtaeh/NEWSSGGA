@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
 </head>
 
 <body>
@@ -15,10 +15,15 @@
 
         <form method="POST">
             {% csrf_token %}
+            {% for i in RegisterForm %}
+            <div>{{i.label}}</div>
+            {{i}}
+            {{i.errors}}
+            {% endfor %}
             <!-- {{registerform.as_p}} -->
-            <label for="id_ID">ID</label>
+            <!-- <label for="id_username">ID</label>
             <br>
-            <input type="text" name="ID" maxlength="30" autocomplete="id" autocapitalize="none" autofocus="" required=""
+            <input type="text" name="username" maxlength="30" autocomplete="username" autocapitalize="none" autofocus="" required=""
                 id="id_ID">
 
             <label for="id_password1">PASSWORD</label>
@@ -29,9 +34,9 @@
             <br>
             <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
 
-            <label for="id_username">name</label>
+            <label for="id_name">name</label>
             <br>
-            <input type="text" name="username" required="" id="id_username">
+            <input type="text" name="name" required="" id="id_name">
 
             <label for="id_birth">birth</label>
             <br>
@@ -65,7 +70,7 @@
 
             <label for="id_phone">phone number</label>
             <br>
-            <input type="tel" name="phone" required="" id="id_phone">
+            <input type="tel" name="phone" required="" id="id_phone"> -->
 
             <input type="submit" value="회원가입" id="register_btn">
         </form>

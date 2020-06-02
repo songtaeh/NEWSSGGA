@@ -15,7 +15,7 @@
 
         <form method="POST">
             {% csrf_token %}
-            <a href="{% url 'register' %}">회원가입</a>
+            <a href="{% url 'signup' %}">회원가입</a>
             <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="ID">
             <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="PW">
             <input type="submit" value="login" id="login_btn">
