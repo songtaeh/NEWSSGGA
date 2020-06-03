@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>createcafe</title>
-    <link rel="stylesheet" type="text/css" href="static/css/createcafe.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'createcafe.css'%}">
 </head>
 <body>
     <div class="container">
@@ -15,29 +15,11 @@
             <hr>
         </div>
         <div class="cafename">
-            <div>카페이름</div>
-            <form action=""><input type="text"></form>
-        </div>
-        <div class="cafeinfo">
-            카페 설명(메타데이터에 들어갈 설명)
-        </div>
-        <div class="cafesearch">
-            <div class="search">카페검색어</div>
-                <div class="searchform">
-                    <p>공백은 자동으로 붙여쓰기 하여 한 키워드로 등록됩니다.</p>
-                    <form action=""><input type="text"></form><button>검색어 등록</button>
-                    <div class="searchtag">태그?</div>
-                </div>
-            </div>
-        <div class="cafepers">
-            <div>카페성격</div>
-            <form action="">
-                공개<input type="checkbox">
+            <form method="POST">
+                {% csrf_token%}
+                {{CafeForm.as_p}}
+                <input id=submitbtn type="submit" value="생성">
             </form>
-        </div>
-        <div class="submit">
-            <input type="submit">
-        </div>
     </div>
 </body>
 </html>

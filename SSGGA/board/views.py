@@ -1,8 +1,16 @@
 from django.shortcuts import render, redirect
 from .models import Board
 from .forms import BoardForm
+from cafeapp.models import Cafe
+from django.http import Http404
 
 # Create your views here.
+def cafemain(request, i_id):
+    try :
+        i = Cafe.objects.get(pk=i_id)
+    except :
+        raise Http404
+    return render(request,'cafe_main.html',{'i':i})
 
 def createpost(request):
     if request.method == "POST":

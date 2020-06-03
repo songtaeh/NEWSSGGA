@@ -35,7 +35,19 @@ body{
   position: relative;
   display: flex;
 }
+.search form{
+  width: 100%;
+  position: relative;
+  display: flex;
 
+}
+.wrap{
+  width: 50%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .searchTerm {
   width: 100%;
   border: 3px solid #00B4CC;
@@ -58,18 +70,12 @@ body{
   cursor: pointer;
   font-size: 20px;
 }
-.wrap{
-  width: 50%;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .cafe{
     position: absolute;    
     display: flex;
     top: 50%;
-    left: 25%;
+    left: 23%;
 }
 .cafe *.cafe_1{
     width: 150px;
@@ -85,7 +91,10 @@ body{
     position: absolute;    
     display: flex;
     top: 75%;
-    left: 25%;
+    left: 23%;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
 }
 .cafe_real *.cafe_2{
     width: 150px;

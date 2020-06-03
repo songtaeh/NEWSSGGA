@@ -17,9 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myapp.views import mainpage
-from cafeapp.views import createcafe
+from cafeapp.views import createcafe, searchcafe
 from account.views import signup, update_profile
-from board.views import createpost, board, post
+from board.views import createpost, board, post, cafemain
 from django.contrib.auth.views import LoginView, LogoutView
 
 from django.conf import settings
@@ -38,5 +38,8 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name="logout"),
     path('createpost/', createpost, name="createpost"),
     path('board/', board, name="board"),
+    path('cafemain/<int:i_id>', cafemain, name="cafemain"),
     path('post/<int:post_id>', post, name="post"),
+    path('searchcafe/',searchcafe,name="searchcafe"),
+
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

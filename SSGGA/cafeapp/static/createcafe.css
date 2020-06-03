@@ -13,6 +13,7 @@ h1{
 .cafename{
     display: flex;
     height: 30px;
+    text-align: center;
 }
 .cafename div{
     flex: 0.2;
@@ -26,6 +27,14 @@ h1{
     height: 20px;
     border: 2px solid #00B4CC;
     border-radius: 10px;
+}
+#submitbtn{
+    width: 90px;
+    height: 40px;
+    background-color : #00B4CC;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
 }
 
 .cafeinfo{

@@ -27,8 +27,11 @@
     </div>
     <div class="wrap">
         <div class="search">
-           <input type="text" class="searchTerm" placeholder="카페명을 검색해주세요">
-           <button type="submit" class="searchButton"></button>
+            {%csrf_token%}
+            <form method="get" action="{%url 'searchcafe'%}">
+                <input type="text" class="searchTerm" placeholder="카페명을 검색해주세요" aria-label="Search" name = "b" value="{{b}}">
+                <button type="submit" class="searchButton"></button>
+            </form>     
         </div>
      </div>
     <div class="cafe">
@@ -38,8 +41,13 @@
         <div class="cafe_1"></div>
     </div>
     <div class="cafe_real">
-        <div class="cafe_2"></div>
-        <div class="cafe_2"></div>
+            {%for d in mycafe%}
+                <a href="{% url 'cafemain' d.id %}">
+                    <div class="cafe_2">
+                        <p>{{d.title}}</p>
+                    </div>
+                </a>
+            {%endfor%}
         <div class="cafe_new"><a href="{%url 'createcafe'%}"><img id="plus" src="/static/img/plus.png" alt="plus"></a></div>
     </div>
 </body>
