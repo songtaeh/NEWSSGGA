@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'account',
     'cafeapp',
     'board',
+    'cafe_deco',
+    'imagekit', # 이미지 가공을 위한 라이브러리
 ]
 
 MIDDLEWARE = [
