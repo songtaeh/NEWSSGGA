@@ -19,7 +19,7 @@ from django.urls import path
 from myapp.views import mainpage
 from cafeapp.views import createcafe, searchcafe
 from account.views import signup, update_profile
-from board.views import createpost, board, post, cafemain
+from board.views import createpost, board, post, cafemain, deletepost, update
 from django.contrib.auth.views import LoginView, LogoutView
 
 from django.conf import settings
@@ -40,6 +40,8 @@ urlpatterns = [
     path('board/', board, name="board"),
     path('cafemain/<int:i_id>', cafemain, name="cafemain"),
     path('post/<int:post_id>', post, name="post"),
+    path('deletepost/<int:post_id>/', deletepost, name="deletepost"),
+    path('update/<int:post_id>/', update, name="update"),
     path('searchcafe/',searchcafe,name="searchcafe"),
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

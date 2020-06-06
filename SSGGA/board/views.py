@@ -24,14 +24,35 @@ def createpost(request):
     context = {'take_all_post':all_post}
     return render(request, 'createpost.html', context)
 
+def deletepost(request, post_id):
+    my_post = Board.objects.get(pk=post_id)
+    my_post.delete()
+
+    return redirect('board')    
+
+def update(request, post_id):
+    my_post = Board.objects.get(pk=post_id)
+    if request.method == "POST":
+        update_form = BoardForm(request.POST, instance=my_post)
+        if update_form.is_valid()==True:
+            update_form.save()
+            return redirect('board')
+        # 검사를 꼭 해주어야 save를 사용할 수 있다.
+    # object를 안에다가 넣어준다
+    update_form = BoardForm(instance=my_post)
+
+    return render(request, 'update.html', {'update_form': update_form, 'my_post': my_post})    
+
 def board(request):
 
-    return render(request, 'board.html')
+    return render(request, 'board.html')    
 
 def post(request, post_id):
     my_post = Board.objects.get(pk=post_id)
 
     return render(request, 'post.html', {'my_post':my_post})
+
+
 
 # def iscorrect(request):
 #     if pw == Board.password:
