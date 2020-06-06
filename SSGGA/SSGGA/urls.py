@@ -20,8 +20,12 @@ from myapp.views import mainpage
 from cafeapp.views import createcafe, searchcafe
 from account.views import signup, update_profile
 <<<<<<< HEAD
+<<<<<<< HEAD
 from board.views import createpost, board, post, cafemain
 from cafe_deco.views import cafe_main, cafe_main_admin, cafe_setting, bulletinboard_page, change_save
+=======
+from board.views import createpost, board, post, cafemain, deletepost, update
+>>>>>>> 7402eec61a9dffe51658084a72d01f3d465ad3d1
 =======
 from board.views import createpost, board, post, cafemain, deletepost, update
 >>>>>>> 7402eec61a9dffe51658084a72d01f3d465ad3d1
