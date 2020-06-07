@@ -21,9 +21,9 @@
             </div>
         </div>
         
-        <a href="{% url 'cafe_main' %}"><div id="main-banner">
-            <img src="{{ image }}" alt="banner_image" />
-        </div></a>
+        <div id="main-banner">
+            <a href="{% url 'cafe_main' %}"></a><img src="{{ image }}" alt="banner_image" /></a>
+        </div>
 
         <div id="content-area">
 
@@ -33,7 +33,7 @@
                         <div id="my-picture">
                             <img src="{% static 'img/user_default_img.png' %}" alt="user_img">
                         </div>
-                        <h3 id="nick-name">닉네임</h3>
+                        <h3 id="nick-name">{{ nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>

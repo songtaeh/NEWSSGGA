@@ -18,7 +18,7 @@
             <a href="" id="logo"><img src="../taehyeon/logo.png" alt="SSGGA"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
-                <!-- <a href="" id="setting">Setting</a> -->
+                <a href="{% url 'cafe_setting' %}" id="setting">Setting</a>
                 <a href="{% url 'logout' %}" id="log-out">Log Out</a>
             </div>
         </div>
@@ -42,7 +42,7 @@
                         <div id="my-picture">
                             <img src="{% static 'img/user_default_img.png' %}" alt="user_img">
                         </div>
-                        <h3 id="nick-name">닉네임</h3>
+                        <h3 id="nick-name">{{ nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>

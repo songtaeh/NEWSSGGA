@@ -57,7 +57,7 @@
                     <div id="bulletinboard-title">
                         전체게시판
                     </div>
-                    
+
                     <div class="bulletinboard-table">
                         <table>
                             <thead>
@@ -68,44 +68,19 @@
                                     <th class="writed-date">작성일</th>
                             </thead>
                             <tbody>
-                                {% for post in posts %}
-                                <tr class="content-table">
-                                <td class="number">my_post.number</th>
-                                <td class="article-title">my_post.title</th>
-                                <td class="writer">my_post.writer</th>
-                                <td class="writed-date">my_post.writed_date</th>
+                                {% for post in all_post %}
+                                    <tr class="content-table">
+                                    <td class="number">{{post.id}} </td>
+                                    <td class="article-title"><a href="{% url 'post' post.id %}">{{post.title}}</a></td>
+                                    <td class="writer">{{post.nickname}}</td>
+                                    <td class="writed-date">{{post.created_at}}</td>
                                 {% endfor %}
-
-                                <tr class="content-table">
-                                    <td class="number">1</th>
-                                    <td class="article-title"><a href="">왜 파이썬은 ;를 쓰지 않나요</a></th>
-                                    <td class="writer">파이썬싫어요</th>
-                                    <td class="writed-date">2020-05-31</th>
-                                </tr>
-                                <tr class="content-table">
-                                    <td class="number">2</th>
-                                    <td class="article-title"><a href="">Django 너무 어려워요</a></th>
-                                    <td class="writer">ㅠㅜ</th>
-                                    <td class="writed-date">2020-05-31</th>
-                                </tr>
-                                <tr class="content-table">
-                                    <td class="number">3</th>
-                                    <td class="article-title">int 묻고 double로 가!</th>
-                                    <td class="writer">철용좌</th>
-                                    <td class="writed-date">2020-05-31</th>
-                                </tr>
-                                <tr class="content-table">
-                                    <td class="number">4</th>
-                                    <td class="article-title">송스윗 너무 스윗해요</th>
-                                    <td class="writer">S2</th>
-                                    <td class="writed-date">2020-05-31</th>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div id="writing-div">
-                        <a href="{% url createpost %}"><div id="writing-button">글쓰기</div></a>
+                        <a href="{% url 'createpost' %}"><div id="writing-button">글쓰기</div></a>
                     </div>
             </div>
 
@@ -114,6 +89,5 @@
     </div>
 
 </body>
-
 
 </html>

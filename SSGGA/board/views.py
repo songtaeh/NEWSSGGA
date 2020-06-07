@@ -17,7 +17,7 @@ def createpost(request):
         myform = BoardForm(request.POST, request.FILES)
         if myform.is_valid():
             myform.save()
-            return redirect('board')
+            return redirect('bulletinboard_page')
     myform = BoardForm()
 
     all_post = Board.objects.all()
