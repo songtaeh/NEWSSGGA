@@ -54,6 +54,9 @@
             </div>
 
             <div id="main-group">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     <div id="bulletinboard-title">
                         전체게시판
                     </div>
@@ -82,6 +85,46 @@
                     <div id="writing-div">
                         <a href="{% url 'createpost' %}"><div id="writing-button">글쓰기</div></a>
                     </div>
+=======
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+                <div id="bulletinboard-title">
+                    전체게시판
+                </div>
+
+                <div class="bulletinboard-table">
+                    <table>
+                        <thead>
+                            <tr class="table-title">
+                            <th class="number">번호</th>
+                            <th class="article-title">제목</th>
+                            <th class="writer">작성자</th>
+                            <th class="writed-date">작성일</th>
+                        </thead>
+                        <tbody>
+                            {% for post in all_post %}
+                                <tr class="content-table">
+                                <td class="number">{{post.id}}</td>
+                                <td class="article-title"><a href="{% url 'post' post.id %}">{{post.title}}</a></td>
+                                <td class="writer">{{post.nickname}}</td>
+                                <td class="writed-date">{{post.created_at}}</td>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="writing-div">
+                    <a href="{% url 'createpost' %}"><div id="writing-button">글쓰기</div></a>
+                </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
             </div>
 
         </div>

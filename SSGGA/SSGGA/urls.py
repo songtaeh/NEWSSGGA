@@ -28,10 +28,14 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.views.generic import RedirectView
+from django.conf.urls import url
+
 # from django.conf.urls.static import static
 # from django.conf import settings
 
 urlpatterns = [
+    url(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
     path('admin/', admin.site.urls),
     path('', mainpage, name="mainpage"),
     path('createcafe/',createcafe, name="createcafe"),

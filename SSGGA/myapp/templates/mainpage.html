@@ -50,6 +50,7 @@
                     </div>
                 </a>
             {%endfor%}
+            
         {%if user.is_authenticated%}
         <div class="cafe_new"><a href="{%url 'createcafe'%}"><img id="plus" src="/static/img/plus.png" alt="plus"></a></div>
         {%endif%}

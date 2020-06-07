@@ -5,7 +5,7 @@ class Cafe(models.Model):
     Explain = models.TextField('카페설명',max_length=1000)
     tag = models.CharField('태그',max_length=30)
     secret = models.BooleanField('공개여부')
-    image = models.ImageField('카페아이콘', null=True)
+    image = models.ImageField('카페아이콘', null=True, default="./images/userdefaultimg.png")
 
     def __str__(self):
         return self.title
