@@ -3,14 +3,19 @@ from .models import Board
 from .forms import BoardForm
 from cafeapp.models import Cafe
 from django.http import Http404
-
+from django.contrib.auth.models import User
+from account.models import Profile
 # Create your views here.
 def cafemain(request, i_id):
     try :
         i = Cafe.objects.get(pk=i_id)
+        user = request.user
+        p = user.profile
+
+        context = {'i':i, 'p':p}
     except :
         raise Http404
-    return render(request,'cafe_main.html',{'i':i})
+    return render(request,'cafe_main.html', context)
 
 def createpost(request):
     if request.method == "POST":
