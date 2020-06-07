@@ -5,7 +5,6 @@ from cafeapp.models import Cafe
 from django.http import Http404
 from django.contrib.auth.models import User
 from account.models import Profile
-
 # Create your views here.
 def cafemain(request, i_id):
     try :
