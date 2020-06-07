@@ -13,7 +13,7 @@ body{
     margin-top: 15px;
 }
 #login {
-    background-color: #00B4CC;
+    background-color: #a29bfe;
     border: none;
     color: black;
     padding: 10px 17px;
@@ -32,7 +32,7 @@ body{
     
     .searchTerm {
     width: 100%;
-    border: 3px solid #00B4CC;
+    border: 3px solid #a29bfe;
     border-right: none;
     padding: 5px;
     height: 20px;
@@ -45,7 +45,7 @@ body{
     width: 40px;
     height: 36px;
     border: 1px solid rgb(93, 152, 160);
-    background: #00B4CC;
+    background: #a29bfe;
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
@@ -78,14 +78,14 @@ body{
 .exp_1{
     width: 550px;
     height: 150px;
-    border: 3px solid #00B4cc;
+    border: 3px solid #a29bfe;
     border-radius: 10px;
 }
 
 .cafe *.cafe_1{
     width: 150px;
     height: 150px;
-    border: 3px solid #00B4cc;
+    border: 3px solid #a29bfe;
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
