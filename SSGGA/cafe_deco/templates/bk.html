@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CafeMain_Admin</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cafe_main.css' %}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="nav_bar">
+            <a href="" id="logo"><img src="../taehyeon/logo.png" alt="SSGGA"></a>
+            <div id="nav_menu">
+                <a href="" id="profile">Profile</a>
+                <a href="./cafe_setting.html" id="setting">Setting</a>
+                <a href="" id="log_out">Log Out</a>
+            </div>
+        </div>
+        
+        <a href="./cafe_main.html"><div id="main_banner">메인 배너</div></a>
+
+        <div id="content_area">
+
+            <div id="menu_group">
+                <div id="info_menu_container">
+                    <div id="my_info">
+                        <div id="my_picture">
+                            사진
+                        </div>
+                        <h3 id="nick_name">닉네임</h3>
+                    </div>
+                    <div id="my_menu_container">
+                        <div class="my_menu"><a href="">내가 쓴 글</a></div>
+                        <div class="my_menu"><a href="">댓글 단 글</a></div>
+                        <div class="my_menu"><a href="">내 스크랩</a></div>
+                    </div>
+                </div>
+                <div id="menu_container">
+                    <div class="cafe_menu">
+                        <ul id="favorite_menu"><a href="">즐겨찾는 게시판</a></ul>
+                    </div>
+                    <div class="cafe_menu">
+                        <ul><a href="">전체글보기</a></ul>
+                    </div>
+                    <div class="cafe_menu">
+                        <ul><a href="">자유게시판</a></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main_group">
+                <div id="main_content">카페에 오신 것을 환영합니다</div>
+                <div id="ad">광고</div>
+                <div id="cafe_contents">전체글보기</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>

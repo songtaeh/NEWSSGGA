@@ -1,0 +1,55 @@
+.container{
+    /* border: 2px solid violet; */
+    width: 450px;
+    height: 800px;
+    margin: 30px auto;
+}
+
+h1{
+    /* border: 2px solid violet; */
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    color: #9c88ff;
+}
+
+form{
+    /* border: 2px solid green; */
+    margin-top: 70px;
+}
+
+.ac_item{
+    width: 99%;
+    height: 35px;
+    margin: 10px auto;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+}
+
+.birth{
+    /* border: 1px solid fuchsia; */
+    display: flex;
+    margin: 10px auto;
+}
+
+#id_yy, #id_mm, #id_dd{
+    width: 100%;
+    height: 35px;
+    flex: 1;
+    margin: 2px;
+}
+
+#id_mm{
+    height: 41px;
+}
+
+#register_btn{
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+    background-color: #9c88ff;
+    border: white;
+    font-size: 20px;
+    color: white;
+}

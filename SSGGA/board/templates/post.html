@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Board}}</title>
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="nav-bar">
+            <a href="" id="logo">SSG-GA</a>
+            <div id="nav-menu">
+                <a href="" id="profile">Profile</a>
+                <a href="" id="log-out">Log Out</a>
+            </div>
+        </div>
+        
+        <a href="./cafe_main.html"><div id="main-banner">메인 배너</div></a>
+
+        <div id="content-area">
+
+            <div id="menu-group">
+                <div id="info-menu-container">
+                    <div id="my-info">
+                        <div id="my-picture">
+                            사진
+                        </div>
+                        <h3 id="nick-name">닉네임</h3>
+                    </div>
+                    <div id="my-menu-container">
+                        <div class="my-menu"><a href="">내가 쓴 글</a></div>
+                        <div class="my-menu"><a href="">댓글 단 글</a></div>
+                        <div class="my-menu"><a href="">내 스크랩</a></div>
+                    </div>
+                </div>
+                <div id="menu-container">
+                    <div class="cafe-menu">
+                        <ul id="favorite-menu"><a href="">즐겨찾는 게시판</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">전체글보기</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">자유게시판</a></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main-group">
+                <div id="wrap">
+                    <div id="bulletin_title">
+                        게시판 이름
+                    </div>
+            
+                    <!-- <form action="" method="post" enctype="multipart/form-data" name="">
+                        {% csrf_token %} -->
+                        <div id="writing">
+                            <p id = "title_container">
+                                {{my_post.title}}
+                                <!-- <div id = "title">제목</div> -->
+                            </p>
+                            <div id = "nickname_container">
+                                <div id="nickname">
+                                    {{my_post.nickname}}
+                                </div>
+                                <div id="time">
+                                    {{my_post.created_at}}
+                                </div>
+                            </div>
+                            <div id = "content_container">
+                                <div id = "content">{{my_post.contents}}</div>
+                            </div>
+                            <div id = "buttom">
+                                <div id ="buttom_content">
+                                    {% if user.is_authenticated %}
+                                    <a href="{% url 'update' my_post.id %}">
+                                    <button id="update">수정</button>
+                                    </a>
+                                    <a href="{% url 'deletepost' my_post.id %}">
+                                        <button id="delete">삭제</button>
+                                    </a>
+                                    {% else %}
+                                    <label for="password">비밀번호: </label>
+                                    <input id="password" type="password" placeholder="●●●●">
+                                    <a href="{% url 'update' my_post.id %}">
+                                        <button id="update">수정</button>
+                                    </a>
+                                    <a href="{% url 'deletepost' my_post.id %}">
+                                        <button id="delete">삭제</button>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>

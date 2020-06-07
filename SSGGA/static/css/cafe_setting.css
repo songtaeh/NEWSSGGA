@@ -1,0 +1,40 @@
+#main_banner {
+    position: relative;
+}
+
+.setting_button {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+}
+
+#setting_banner {
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+#add_menu {
+    display: block;
+    margin: 20px auto;
+}
+
+#main_content {
+    position: relative;
+}
+
+#main_content_decorate {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#main_group {
+    position: relative;
+}
+
+#change_save {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
