@@ -57,7 +57,11 @@
     width: 100px;
     height: 100px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* background-color: lime; */
+=======
+    background-color: lime;
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
 =======
     background-color: lime;
 >>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
@@ -66,10 +70,13 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .img-item{
     width: 100%;
 }
 
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
 =======
 >>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
 #nick-name {
