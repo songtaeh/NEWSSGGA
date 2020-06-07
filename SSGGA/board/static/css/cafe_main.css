@@ -46,39 +46,21 @@
 }
 
 #info-menu-container {
-    height: 350px;
+    height: 200px;
     /* background-color: yellowgreen; */
     box-sizing: border-box;
     border-top: solid 2px gray;
     padding: 10px 0;
 }
 
-#my-picture {
-    width: 100px;
-    height: 100px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /* background-color: lime; */
-=======
+.img-item {
+    display: flex;
+    width: 50%;
     background-color: lime;
->>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-=======
-    background-color: lime;
->>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-    margin: 20px auto;
-    text-align: center;
+    margin: 10px auto;
+    justify-content: center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.img-item{
-    width: 100%;
-}
-
-=======
->>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-=======
->>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
 #nick-name {
     text-align: center;
     margin-bottom: 20px;
@@ -109,8 +91,9 @@
 }
 
 #menu-container {
-    /* background-color: lightgreen; */
-    box-sizing: border-box;
+    display: inline;
+    background-color: lightgreen;
+    /* box-sizing: border-box; */
     margin-top: 10px;
 }
 

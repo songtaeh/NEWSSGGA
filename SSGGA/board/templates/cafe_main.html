@@ -19,38 +19,25 @@
                 <a href="" id="log-out">Log Out</a>
             </div>
         </div>
-        
-        <a href="./cafe_main.html"><div id="main-banner">메인 배너</div></a>
+
+        <a href="./cafe_main.html">
+            <div id="main-banner">메인 배너</div>
+        </a>
 
         <div id="content-area">
 
             <div id="menu-group">
                 <div id="info-menu-container">
                     <div id="my-info">
-                        <div id="my-picture">
-                            <img class="img-item" src = {{p.image.url}}>
-                        </div>
+                        <img class="img-item" src={{p.image.url}}>
                         <h3 id="nick-name">{{p.nickname}}</h3>
-                            {{p.nickname}}
-                        </div>
+                    </div>
 
-                    </div>
-                    <div id="my-menu-container">
-                        <div class="my-menu"><a href="">내가 쓴 글</a></div>
-                        <div class="my-menu"><a href="">댓글 단 글</a></div>
-                        <div class="my-menu"><a href="">내 스크랩</a></div>
-                    </div>
                 </div>
-                <div id="menu-container">
-                    <div class="cafe-menu">
-                        <ul id="favorite-menu"><a href="">즐겨찾는 게시판</a></ul>
-                    </div>
-                    <div class="cafe-menu">
-                        <ul><a href="">전체글보기</a></ul>
-                    </div>
-                    <div class="cafe-menu">
-                        <ul><a href="">자유게시판</a></ul>
-                    </div>
+                <div id="my-menu-container">
+                    <div class="my-menu"><a href="">내가 쓴 글</a></div>
+                    <div class="my-menu"><a href="">댓글 단 글</a></div>
+                    <div class="my-menu"><a href="">내 스크랩</a></div>
                 </div>
             </div>
 
@@ -60,7 +47,20 @@
                 <div id="cafe-contents">전체글보기</div>
             </div>
 
+            <div id="menu-container">
+                <div class="cafe-menu">
+                    <ul id="favorite-menu"><a href="">즐겨찾는 게시판</a></ul>
+                </div>
+                <div class="cafe-menu">
+                    <ul><a href="">전체글보기</a></ul>
+                </div>
+                <div class="cafe-menu">
+                    <ul><a href="">자유게시판</a></ul>
+                </div>
+            </div>
         </div>
+
+    </div>
 
     </div>
 
