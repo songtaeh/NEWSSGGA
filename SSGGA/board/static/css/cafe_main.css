@@ -80,10 +80,10 @@
     color: black;
 }
 
-/* #my-info {
+#my-info {
     height: 200px;
     box-sizing: border-box;
-} */
+}
 
 #my-menu-continer {
     height: 100px;
@@ -92,8 +92,7 @@
 
 #menu-container {
     display: inline;
-    background-color: lightgreen;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     margin-top: 10px;
 }
 
