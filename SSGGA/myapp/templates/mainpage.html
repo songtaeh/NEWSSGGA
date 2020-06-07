@@ -23,14 +23,16 @@
         </div>
     </div>
     <div class="logo">
-        <img id="ssgga" src="/static/img/logo.png" alt="SSGGA">
+        <img id="ssgga" src="./static/img/logo.png" alt="SSGGA">
     </div>
     <div class="wrap">
         <div class="search">
             {%csrf_token%}
             <form method="get" action="{%url 'searchcafe'%}">
                 <input type="text" class="searchTerm" placeholder="카페명을 검색해주세요" aria-label="Search" name = "b" value="{{b}}">
-                <button type="submit" class="searchButton"></button>
+                <button type="submit" class="searchButton">
+                    <img id="searchimg" src="./static/img/searchimg.png" alt="search">
+                </button>
             </form>     
         </div>
      </div>
@@ -48,7 +50,9 @@
                     </div>
                 </a>
             {%endfor%}
+        {%if user.is_authenticated%}
         <div class="cafe_new"><a href="{%url 'createcafe'%}"><img id="plus" src="/static/img/plus.png" alt="plus"></a></div>
+        {%endif%}
     </div>
 </body>
 </html>
