@@ -14,7 +14,7 @@
     <div class="container">
 
         <div id="nav-bar">
-            <a href="../taehyeon/new1.html" id="logo"><img src="../taehyeon/logo.png" alt="SSGGA"></a>
+            <a href=""><img src="../../static/logo.png" alt="SSGGA" id="logo"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
                 <a href="{% url 'logout' %}" id="log-out">Log Out</a>
@@ -33,7 +33,7 @@
                         <div id="my-picture">
                             <img src="{% static 'img/user_default_img.png' %}" alt="user_img">
                         </div>
-                        <h3 id="nick-name">{{ nickname }}</h3>
+                        <h3 id="nick-name">{{ user_info.nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>
@@ -55,7 +55,7 @@
             </div>
 
             <div id="main-group">
-                <div id="main-content">카페에 오신 것을 환영합니다</div>
+                <div id="main-content">{{ user_info.nickname }}님의 카페에 오신 것을 환영합니다</div>
                 <a href="https://likelion.net/"><div id="ad">
                     <div id="sponsor">Sponsored</div>
                 </div></a>

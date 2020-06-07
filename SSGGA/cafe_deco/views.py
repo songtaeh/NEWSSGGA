@@ -45,5 +45,4 @@ def user_account(request):
     user_info = Profile.objects.all()
     name = user_info.name
     nickname = user_info.nickname
-
-    return render(request, 'cafe_main.html', {'user_info':user_info})
+    return render(request, 'cafe_main.html', {'user_info': user_info})

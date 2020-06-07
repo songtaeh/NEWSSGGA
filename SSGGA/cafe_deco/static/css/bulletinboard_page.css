@@ -4,6 +4,11 @@
     margin-bottom: 30px;
 }
 
+#main-group {
+    width: 900px;
+    margin-left: 10px;
+}
+
 table {
     border-top: 1px solid black;
     width: 100%;

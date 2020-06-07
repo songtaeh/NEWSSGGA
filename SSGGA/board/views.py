@@ -28,7 +28,7 @@ def deletepost(request, post_id):
     my_post = Board.objects.get(pk=post_id)
     my_post.delete()
 
-    return redirect('board')    
+    return redirect('bulletinboard_page')    
 
 def update(request, post_id):
     my_post = Board.objects.get(pk=post_id)
