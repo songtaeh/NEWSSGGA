@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Setting</title>
+    <link rel="stylesheet" href="{% static 'css/cafe_main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cafe_setting.css' %}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="nav-bar">
+            <a href="" id="logo"><img src="../taehyeon/logo.png" alt="SSGGA"></a>
+            <div id="nav-menu">
+                <a href="" id="profile">Profile</a>
+                <a href="{% url 'cafe_setting' %}" id="setting">Setting</a>
+                <a href="{% url 'logout' %}" id="log-out">Log Out</a>
+            </div>
+        </div>
+
+        <div id="main-banner">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <img src="{{ image }}" alt="banner_image" />
+                <div id="banner_change_form">
+                    {{ form.as_p }}
+                    <button type="submit">배너 변경</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="content-area">
+
+            <div id="menu-group">
+                <div id="info-menu-container">
+                    <div id="my-info">
+                        <div id="my-picture">
+                            <img src="{% static 'img/user_default_img.png' %}" alt="user_img">
+                        </div>
+                        <h3 id="nick-name">{{ nickname }}</h3>
+                    </div>
+                    <div id="my-menu-container">
+                        <div class="my-menu"><a href="">내가 쓴 글</a></div>
+                        <div class="my-menu"><a href="">댓글 단 글</a></div>
+                        <div class="my-menu"><a href="">내 스크랩</a></div>
+                    </div>
+                </div>
+                <div id="menu-container">
+                    <div class="cafe-menu">
+                        <ul id="favorite-menu"><a href="">즐겨찾는 게시판</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">전체글보기</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">자유게시판</a></ul>
+                    </div>
+                </div>
+                <input type="submit" class="setting-button" id="add-menu" value="게시판 추가">
+            </div>
+
+            <div id="main-group">
+                <div id="main-content">
+                    <input type="submit" class="setting-button" id="main-content-decorate" value="대문 꾸미기">
+                </div>
+                <a href="https://likelion.net/"><div id="ad">
+                    <div id="sponsor">Sponsored</div>
+                </div></a>
+                <div id="cafe-contents">전체글보기</div>
+                <a href="{% url 'change_save' %}"><input type="submit" class="setting-button" id="change-save" value="변경 완료"></a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

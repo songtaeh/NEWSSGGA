@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+    <div class=container>
+        <h1>SSGGA</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" placeholder="ID">
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="PW">
+            <input type="submit" value="login" id="login_btn">
+            <div class="urlmoum">
+                <a href="{% url 'signup' %}">회원가입</a> /  아이디 찾기  /  비밀번호 찾기
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

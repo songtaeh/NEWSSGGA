@@ -1,0 +1,58 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{%static 'mainpage.css'%}">
+</head>
+<body>
+    <div class="nav">
+        <div class="login">
+            {%if user.is_authenticated%}
+                <p>{{user}}님 안녕하세요</p>
+                <a href="{%url 'logout' %}">
+                    <button id="login">로그아웃</button>
+                </a>
+            {%else%}
+                <a href="{%url 'login'%}">
+                    <button id="login">로그인</button>
+                </a>
+            {%endif%}
+        </div>
+    </div>
+    <div class="logo">
+        <img id="ssgga" src="./static/img/logo.png" alt="SSGGA">
+    </div>
+    <div class="wrap">
+        <div class="search">
+            {%csrf_token%}
+            <form method="get" action="{%url 'searchcafe'%}">
+                <input type="text" class="searchTerm" placeholder="카페명을 검색해주세요" aria-label="Search" name = "b" value="{{b}}">
+                <button type="submit" class="searchButton">
+                    <img id="searchimg" src="./static/img/searchimg.png" alt="search">
+                </button>
+            </form>     
+        </div>
+     </div>
+    <div class="cafe">
+        <div class="cafe_1"></div>
+        <div class="cafe_1"></div>
+        <div class="cafe_1"> </div>
+        <div class="cafe_1"></div>
+    </div>
+    <div class="cafe_real">
+            {%for d in mycafe%}
+                <a href="{% url 'cafemain' d.id %}">
+                    <div class="cafe_2">
+                        <p>{{d.title}}</p>
+                    </div>
+                </a>
+            {%endfor%}
+        {%if user.is_authenticated%}
+        <div class="cafe_new"><a href="{%url 'createcafe'%}"><img id="plus" src="/static/img/plus.png" alt="plus"></a></div>
+        {%endif%}
+    </div>
+</body>
+</html>
