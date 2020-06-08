@@ -29,8 +29,13 @@
             <div id="menu-group">
                 <div id="info-menu-container">
                     <div id="my-info">
+                        {%if user.is_authenticated%}
                         <img class="img-item" src={{p.image.url}}>
                         <h3 id="nick-name">{{p.nickname}}</h3>
+                        {%else%}
+                        <img class="img-item" src="/static/img/user_default_img.png">
+                        <h3 id="nick-name">익명</h3>
+                        {%endif%}
                     </div>
 
                 </div>

@@ -14,7 +14,8 @@ def cafemain(request, i_id):
 
         context = {'i':i, 'p':p}
     except :
-        raise Http404
+        i = Cafe.objects.get(pk=i_id)
+        context = {}
     return render(request,'cafe_main.html', context)
 
 def createpost(request):
