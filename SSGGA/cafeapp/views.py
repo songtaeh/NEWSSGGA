@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CafeForm
 from .models import Cafe
 from django.http import Http404
+from django.contrib.auth.decorators import login_required
 # Create your views here.
-
+@login_required
 def createcafe(request):
     if request.method == "POST":
         cafeform = CafeForm(request.POST or None)
