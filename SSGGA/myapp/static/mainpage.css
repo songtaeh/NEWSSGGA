@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body{
     background: white;
@@ -5,11 +6,20 @@ body{
 
 .nav{
 
+=======
+body {
+  margin: 0;
+  padding: 0;
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 }
 
 .login{
     text-align: right;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 #login {
     background-color: #a29bfe;
     border-radius: 5px;
@@ -20,6 +30,7 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+<<<<<<< HEAD
     margin-right: 10px;
   }
   
@@ -30,10 +41,24 @@ body{
 #ssgga{
     height: 150px;
     margin-bottom: 30px;
+=======
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+  
+.logo-container {
+    text-align: center;
+}
+
+#ssgga-logo {
+    height: 150px;
+    margin: 30px 0;
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 }
 
 .search form{
   width: 100%;
+<<<<<<< HEAD
   position: relative;
   display: flex;
 }
@@ -45,6 +70,20 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+=======
+  /* position: relative; */
+  display: flex;
+}
+
+.search-bar-container{
+  width: 800px;
+  /* position: absolute; */
+  /* top: 35%; */
+  margin: 30px auto;
+  /* transform: translate(-50%, -50%); */
+}
+
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 .searchTerm {
   width: 100%;
   font-size: 18px;
@@ -57,7 +96,11 @@ body{
   outline: none;
 }
 
+<<<<<<< HEAD
 .searchButton {
+=======
+#searchButton {
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
   width: 60px;
   height: 50px;
   border: 1px solid rgb(93, 152, 160);
@@ -69,6 +112,7 @@ body{
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 #searchimg{
   width: 90%;
 }
@@ -80,14 +124,43 @@ body{
     left: 25%;
 }
 .cafe *.cafe_1{
+=======
+#search-icon {
+  width: 90%;
+}
+
+#cafe-container {
+  width: 800px;
+  padding: 50px 0;
+  margin: 0 auto; 
+}
+
+#cafe-example-container {
+    /* position: absolute;     */
+    display: flex;
+    /* top: 50%;
+    left: 25%; */
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+#cafe-example-container *.cafe-example {
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     width: 150px;
     height: 150px;
     /* border: 3px solid #a29bfe; */
     border-radius: 10px;
+<<<<<<< HEAD
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-right: 50px;
+=======
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    /* margin-right: 50px; */
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 }
 
 .fake_icon {
@@ -95,6 +168,7 @@ body{
   height: 100%;
   border-radius: 10px;
 }
+<<<<<<< HEAD
 .cafe_real{
     position: absolute;    
     display: flex;
@@ -112,6 +186,27 @@ body{
     align-items: center;
     justify-content: center;
     margin-right: 50px;
+=======
+
+#cafe-real-container {
+    /* position: absolute;     */
+    display: flex;
+    justify-content: space-between;
+    /* top: 75%;
+    left: 25%; */
+    font-size: 20px;
+    /* text-align: center;
+    vertical-align: middle; */
+}
+#cafe-real-container *.cafe-real{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: center;
+    margin-right: 50px; */
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 }
 
 #cafe_icon {
@@ -119,17 +214,29 @@ body{
   height: 100%;
   border-radius: 10px;
 }
+<<<<<<< HEAD
 .cafe_new{
+=======
+.cafe_usermade{
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     width: 150px;
     height: 150px;
     border: 3px solid #a29bfe;
     border-radius: 10px;
+<<<<<<< HEAD
     flex-direction: column;
+=======
+    /* flex-direction: column;
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     align-items: center;
     justify-content: center;
     margin-right: 50px;
     text-align: center;
+<<<<<<< HEAD
     display: flex;
+=======
+    display: flex; */
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 }
 
 #plus{

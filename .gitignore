@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 myvenv
 db.sqlite3
 __pycache__/
 migrations/
+=======
+myvenv
+db.sqlite3
+__pycache__
+>>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
