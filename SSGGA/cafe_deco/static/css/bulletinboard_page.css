@@ -1,0 +1,86 @@
+#bulletinboard-title {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+#main-group {
+    width: 900px;
+    margin-left: 10px;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+table {
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+table tr {
+    text-align: center;
+    line-height: 35px;
+}
+
+.content-table a{
+    text-decoration: none;
+    color: black;
+}
+
+.content-table>td {
+    padding: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.content-table:first-child td {
+    border-top: 1px solid lightgray;
+}
+
+.number {
+    width: 10%;
+}
+
+.article-title {
+    width: 50%;
+}
+
+.writer {
+    width: 20%;
+}
+
+.writed-date {
+    width: 20%;
+}
+
+#writing-div {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+#writing-div a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+}
+
+#writing-button {
+    width: 100px;
+    height: 30px;
+    border: 1px solid gray;
+    position: absolute;
+    right: 0px;
+}

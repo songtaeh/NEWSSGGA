@@ -1,0 +1,44 @@
+.container{
+    /* border: 2px solid violet; */
+    width: 450px;
+    height: 700px;
+    margin: 30px auto;
+}
+
+h1{
+    /* border: 2px solid violet; */
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    color: #9c88ff;
+}
+
+form{
+    /* border: 2px solid green; */
+    margin-top: 70px;
+}
+
+#id_username, #id_password{
+    width: 99%;
+    height: 35px;
+    margin: 10px auto;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+}
+
+#login_btn{
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    background-color: #a29bfe;
+    border: white;
+    font-size: 20px;
+    color: white;
+}
+
+.urlmoum{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

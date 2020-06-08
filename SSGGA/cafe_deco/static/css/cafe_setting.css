@@ -1,0 +1,47 @@
+#main-banner {
+    height : auto;
+}
+
+#banner_change_form {
+    margin-left: auto;
+    text-align: right ;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.setting-button {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+}
+
+#setting-banner {
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+#add-menu {
+    display: block;
+    margin: 20px auto;
+}
+
+#main-content {
+    position: relative;
+}
+
+#main-content-decorate {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#main-group {
+    position: relative;
+}
+
+#change-save {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}

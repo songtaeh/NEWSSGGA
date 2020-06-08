@@ -1,0 +1,114 @@
+
+body{
+    background: #f2f2f2;
+  }
+
+.nav{
+
+}
+.login{
+    text-align: right;
+}
+#login {
+    background-color: #00B4CC;
+    border: none;
+    color: black;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+.logo{
+    text-align: center;
+}
+#ssgga{
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid rgb(93, 152, 160);
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.wrap{
+  width: 50%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cafe{
+    position: absolute;    
+    display: flex;
+    top: 50%;
+    left: 25%;
+}
+.cafe *.cafe_1{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #00B4cc;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+.cafe_real{
+    position: absolute;    
+    display: flex;
+    top: 75%;
+    left: 25%;
+}
+.cafe_real *.cafe_2{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #00B4cc;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+.cafe_new{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #00B4cc;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    text-align: center;
+    display: flex;
+}
+#plus{
+    height: 70px;
+}

@@ -1,0 +1,92 @@
+body{
+    background: #f2f2f2;
+  }
+.container{
+    width: 1100px;
+    margin: 10px auto;
+}
+h1{
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.cafename{
+    display: flex;
+    height: 30px;
+}
+.cafename div{
+    flex: 0.2;
+    font-size: 20px;
+}
+.cafename form{
+    flex: 1;
+}
+.cafename input{
+    width: 700px;
+    height: 20px;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+}
+
+.cafeinfo{
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(211, 212, 211);
+}
+.cafesearch{
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+}
+.search{
+    flex: 0.2;
+}
+.cafesearch {
+    flex: 0.2;
+}
+.searchform{
+    font-size: 10px;
+    color: rgb(102, 101, 101);
+    flex:1;
+}
+.searchform form{
+    display: inline;
+}
+.searchform input{
+height: 20px;
+width: 600px;
+border: 2px solid #00B4CC;
+border-radius: 10px;
+margin-right: 20px;
+}
+.searchform button{
+    background-color: white;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+}
+.searchtag{
+    margin-top: 5px;
+    height: 100px;
+    background-color: rgb(211, 212, 211);
+}
+
+
+.cafepers{ 
+    display: flex;
+    margin-top: 20px;
+}
+.cafepers div{
+    flex: 0.2;
+    font-size: 20px;
+}
+.submit{
+    margin-top: 20px;
+    text-align: center;
+}
+.submit input{
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+}
