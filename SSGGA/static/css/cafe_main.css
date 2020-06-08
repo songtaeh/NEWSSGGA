@@ -46,19 +46,19 @@
 }
 
 #info-menu-container {
-    height: 350px;
+    height: 200px;
     /* background-color: yellowgreen; */
     box-sizing: border-box;
     border-top: solid 2px gray;
     padding: 10px 0;
 }
 
-#my-picture {
-    width: 100px;
-    height: 100px;
+.img-item {
+    display: flex;
+    width: 50%;
     background-color: lime;
-    margin: 20px auto;
-    text-align: center;
+    margin: 10px auto;
+    justify-content: center;
 }
 
 #nick-name {
@@ -80,10 +80,10 @@
     color: black;
 }
 
-/* #my-info {
+#my-info {
     height: 200px;
     box-sizing: border-box;
-} */
+}
 
 #my-menu-continer {
     height: 100px;
@@ -91,7 +91,7 @@
 }
 
 #menu-container {
-    /* background-color: lightgreen; */
+    display: inline;
     box-sizing: border-box;
     margin-top: 10px;
 }

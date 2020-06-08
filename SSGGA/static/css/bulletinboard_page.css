@@ -1,9 +1,29 @@
-#bulletinboard_title {
+#bulletinboard-title {
     font-size: x-large;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+#main-group {
+    width: 900px;
+    margin-left: 10px;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
+=======
+>>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
 table {
     border-top: 1px solid black;
     width: 100%;
@@ -14,17 +34,17 @@ table tr {
     line-height: 35px;
 }
 
-.content_table a{
+.content-table a{
     text-decoration: none;
     color: black;
 }
 
-.content_table>td {
+.content-table>td {
     padding: 0;
     border-bottom: 1px solid lightgray;
 }
 
-.content_table:first-child td {
+.content-table:first-child td {
     border-top: 1px solid lightgray;
 }
 
@@ -32,7 +52,7 @@ table tr {
     width: 10%;
 }
 
-.article_title {
+.article-title {
     width: 50%;
 }
 
@@ -40,24 +60,24 @@ table tr {
     width: 20%;
 }
 
-.writed_date {
+.writed-date {
     width: 20%;
 }
 
-#writing_div {
+#writing-div {
     width: 100%;
     margin-top: 20px;
     position: relative;
 }
 
-#writing_div a {
+#writing-div a {
     text-decoration: none;
     color: black;
     text-align: center;
     line-height: 30px;
 }
 
-#writing_button {
+#writing-button {
     width: 100px;
     height: 30px;
     border: 1px solid gray;
