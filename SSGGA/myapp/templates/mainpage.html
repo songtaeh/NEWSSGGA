@@ -1,6 +1,6 @@
 {%load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,38 +22,44 @@
             {%endif%}
         </div>
     </div>
-    <div class="logo">
-        <img id="ssgga" src="./static/img/logo.png" alt="SSGGA">
+    <div class="logo-container">
+        <img id="ssgga-logo" src="./static/img/logo.png" alt="SSGGA">
     </div>
-    <div class="wrap">
+
+    <div class="search-bar-container">
         <div class="search">
             {%csrf_token%}
             <form method="get" action="{%url 'searchcafe'%}">
                 <input type="text" class="searchTerm" placeholder="카페명을 검색해주세요" aria-label="Search" name = "b" value="{{b}}">
-                <button type="submit" class="searchButton">
-                    <img id="searchimg" src="./static/img/searchimg.png" alt="search">
+                <button type="submit" id="searchButton">
+                    <img id="search-icon" src="./static/img/searchimg.png" alt="search">
                 </button>
             </form>     
         </div>
     </div>
-    <div class="cafe">
-        <div class="cafe_1"><img class = "fake_icon" src="https://recipe1.ezmember.co.kr/cache/recipe/2018/08/06/889e51fc737aa8eb420ce237ce95dcf9.jpg"></div>
-        <div class="cafe_1"><img class = "fake_icon" src="https://lh3.googleusercontent.com/proxy/N4ZltgM9QxJEvc-dYVVxVRamPtEg9wNTcK2LxSBELXD1a1sLR7NAheExe_nD1NpnA3U68VZSOz-ORfTuyevBmd5BULg-sf7jbJl2A37r1xYBKYAf2SFxzvLK5s8fnqc86BAz2trhYnr1I2k"></div>
-        <div class="cafe_1"><img class = "fake_icon" src="https://img.danawa.com/prod_img/500000/947/992/img/2992947_1.jpg?shrink=500:500&_v=20200212121605"></div>
-        <div class="cafe_1"><img class = "fake_icon" src="https://image.chosun.com/sitedata/image/202005/22/2020052201547_0.png"></div>
-    </div>
-    <div class="cafe_real">
+    
+    <div id="cafe-container">
+
+        <div id="cafe-example-container">
+            <div class="cafe-example"><img class = "fake_icon" src="https://recipe1.ezmember.co.kr/cache/recipe/2018/08/06/889e51fc737aa8eb420ce237ce95dcf9.jpg"></div>
+            <div class="cafe-example"><img class = "fake_icon" src="https://lh3.googleusercontent.com/proxy/N4ZltgM9QxJEvc-dYVVxVRamPtEg9wNTcK2LxSBELXD1a1sLR7NAheExe_nD1NpnA3U68VZSOz-ORfTuyevBmd5BULg-sf7jbJl2A37r1xYBKYAf2SFxzvLK5s8fnqc86BAz2trhYnr1I2k"></div>
+            <div class="cafe-example"><img class = "fake_icon" src="https://img.danawa.com/prod_img/500000/947/992/img/2992947_1.jpg?shrink=500:500&_v=20200212121605"></div>
+            <div class="cafe-example"><img class = "fake_icon" src="https://image.chosun.com/sitedata/image/202005/22/2020052201547_0.png"></div>
+        </div>
+
+        <div id="cafe-real-container">
             {%for d in mycafe%}
                 <a href="{% url 'cafemain' d.id %}">
-                    <div class="cafe_2">
+                    <div class="cafe-real">
                         <img id = "cafe_icon" src={{d.image.url}}>
                     </div>
                 </a>
             {%endfor%}
-            
-        {%if user.is_authenticated%}
-        <div class="cafe_new"><a href="{%url 'createcafe'%}"><img id="plus" src="/static/img/plus.png" alt="plus"></a></div>
-        {%endif%}
+                
+            {%if user.is_authenticated%}
+                <div class="cafe_usermade"><a href="{%url 'createcafe'%}"><img id="plus" src="/static/img/plus.png" alt="plus"></a></div>
+            {%endif%}
+        </div>
     </div>
 </body>
 </html>
