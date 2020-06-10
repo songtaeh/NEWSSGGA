@@ -14,17 +14,19 @@
     <div class="container">
 
         <div id="nav-bar">
-            <a href="../taehyeon/new1.html" id="logo"><img src="../taehyeon/logo.png" alt="SSGGA"></a>
+            <a href="{% url 'mainpage' %}" id="logo"><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
-                <a href="./cafe_setting.html" id="profile">Setting</a>
+                <a href="{% url 'cafe_setting' %}" id="profile">Setting</a>
                 <a href="{% url 'logout' %}" id="log_out">Log Out</a>
             </div>
         </div>
         
-        <a href="{% url 'cafe_main' %}"><div id="main-banner">
+        <div id="main-banner">
+            <a href="{% url 'cafe_main' %}">
             <img src="{{ image }}" alt="banner_image" />
-        </div></a>
+            </a>
+        </div>
 
         <div id="content-area">
 
@@ -56,11 +58,14 @@
             </div>
 
             <div id="main-group">
-                <div id="main-content">카페에 오신 것을 환영합니다</div>
-                <a href="https://likelion.net/"><div id="ad">
+                <div id="main-content">{{ user_info.nickname }}님의 카페에 오신 것을 환영합니다</div>
+                <div id="ad">
+                <a href="https://likelion.net/">
+                    <img src="{% static 'img/likelion_pnu.png' %}">
                     <div id="sponsor">Sponsored</div>
                 </div></a>
                 <div id="cafe-contents">전체글보기</div>
+            </div>
             </div>
 
         </div>

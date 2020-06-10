@@ -10,10 +10,7 @@
 }
 
 #logo {
-    text-decoration: none;
-    color: black;
-    font-weight: 900;
-    font-size: 20px;
+    width: 100px;
 }
 
 #nav-menu {
@@ -46,32 +43,19 @@
 }
 
 #info-menu-container {
-<<<<<<< HEAD
     height: 200px;
-=======
-    height: 350px;
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     /* background-color: yellowgreen; */
     box-sizing: border-box;
     border-top: solid 2px gray;
     padding: 10px 0;
 }
 
-<<<<<<< HEAD
 .img-item {
     display: flex;
     width: 50%;
     background-color: lime;
     margin: 10px auto;
     justify-content: center;
-=======
-#my-picture {
-    width: 100px;
-    height: 100px;
-    background-color: lime;
-    margin: 20px auto;
-    text-align: center;
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 }
 
 #nick-name {
@@ -93,17 +77,10 @@
     color: black;
 }
 
-<<<<<<< HEAD
 #my-info {
     height: 200px;
     box-sizing: border-box;
 }
-=======
-/* #my-info {
-    height: 200px;
-    box-sizing: border-box;
-} */
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 
 #my-menu-continer {
     height: 100px;
@@ -111,11 +88,7 @@
 }
 
 #menu-container {
-<<<<<<< HEAD
     display: inline;
-=======
-    /* background-color: lightgreen; */
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     box-sizing: border-box;
     margin-top: 10px;
 }
@@ -161,6 +134,10 @@
     background-color: cyan;
     margin-top: 10px;
     margin-left: 10px;
+}
+
+#ad #ad-img {
+    width: 890px;
 }
 
 #cafe-contents {

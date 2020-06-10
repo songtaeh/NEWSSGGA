@@ -7,12 +7,27 @@ from account.models import Profile
 # Create your views here.
 
 def cafe_main(request):
+    image_obj = BannerImage.objects.last()
+    if image_obj:
+        url = image_obj.image.url
+    else:
+        url = ""
 
-    return render(request, 'cafe_main.html')
+    return render(request, 'cafe_main.html', {
+        "image": url    
+    })
 
 def cafe_main_admin(request):
 
-    return render(request, 'cafe_main_admin.html')
+    image_obj = BannerImage.objects.last()
+    if image_obj:
+        url = image_obj.image.url
+    else:
+        url = ""
+
+    return render(request, 'cafe_main_admin.html', {
+        "image": url    
+    })
 
 def cafe_setting(request):
     if request.method == "GET":
@@ -32,11 +47,35 @@ def cafe_setting(request):
         form = BannerForm(request.POST, request.FILES)
         if form.is_valid:
             form.save()
-            return redirect("cafe_setting")
+            return redirect("cafe_main")
 
 def bulletinboard_page(request):
     all_post = Board.objects.all()
-    return render(request, 'bulletinboard_page.html', {'all_post':all_post})
+
+    user = request.user
+    if user.is_authenticated:
+        profile = request.user.profile
+    else:
+        profile = None
+
+    return render(request, 'bulletinboard_page.html', {
+        'all_post': all_post,
+        'profile': profile,
+    })
+
+# def mypost(request):
+#     posts = Board.objects.all()
+#     profile = None
+#     user = request.user
+#     if user.is_authenticated:
+#         posts = posts.filter(nickname=request.user.profile.nickname)
+#         profile = request.user.profile
+
+#     return render(request, 'mypost html 추가예정', {
+#         'all_post': posts,
+#         'profile': profile,
+#     })
+
 
 def change_save(request):
     return redirect("cafe_main")

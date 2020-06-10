@@ -6,8 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CafeMain</title>
+    <title>전체게시판</title>
     <link rel="stylesheet" href="{% static 'css/cafe_main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bulletinboard_page.css' %}">
 </head>
 
 <body>
@@ -21,11 +22,7 @@
             </div>
         </div>
 
-        <div id="main-banner">
-            <a href="{% url 'cafe_main' %}">
-            <img src="{{ image }}" alt="banner_image" />
-            </a>
-        </div>
+        <a href="./cafe_main.html"><div id="main-banner">메인 배너</div></a>
 
         <div id="content-area">
 
@@ -35,7 +32,7 @@
                         <div id="my-picture">
                             <img src="{% static 'img/user_default_img.png' %}" alt="user_img">
                         </div>
-                        <h3 id="nick-name">{{ user_info.nickname }}</h3>
+                        <h3 id="nick-name">{{ profile.nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>
@@ -57,20 +54,36 @@
             </div>
 
             <div id="main-group">
-                <div id="main-content">{{ user_info.nickname }}님의 카페에 오신 것을 환영합니다</div>
-                <div id="ad">
-                <a href="https://likelion.net/">
-                    <img src="{% static 'img/likelion_pnu.png' %}">
-                    <div id="sponsor">Sponsored</div>
-                </div></a>
-                <div id="cafe-contents">전체글보기</div>
-            </div>
+                    <div id="bulletinboard-title">
+                        전체게시판
+                    </div>
 
+                    <div class="bulletinboard-table">
+                        <table>
+                            <thead>
+                                <tr class="table-title">
+                                    <th class="number">번호</th>
+                                    <th class="article-title">제목</th>
+                                    <th class="writer">작성자</th>
+                                    <th class="writed-date">작성일</th>
+                            </thead>
+                            <tbody>
+                                <!-- {% for post in all_post %}
+                                    <tr class="content-table">
+                                    <td class="number">{{post.id}} </td>
+                                    <td class="article-title"><a href="{% url 'post' post.id %}">{{post.title}}</a></td>
+                                    <td class="writer">{{post.nickname}}</td>
+                                    <td class="writed-date">{{post.created_at}}</td>
+                                {% endfor %} -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
 
 </body>
-
 
 </html>

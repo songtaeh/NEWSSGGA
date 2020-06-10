@@ -10,10 +10,7 @@
 }
 
 #logo {
-    text-decoration: none;
-    color: black;
-    font-weight: 900;
-    font-size: 20px;
+    width: 100px;
 }
 
 #nav-menu {
@@ -137,6 +134,7 @@
     background-color: cyan;
     margin-top: 10px;
     margin-left: 10px;
+    box-sizing: border-box;
 }
 
 #cafe-contents {

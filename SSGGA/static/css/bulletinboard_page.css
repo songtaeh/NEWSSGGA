@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 #bulletinboard-title {
-=======
-#bulletinboard_title {
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     font-size: x-large;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,8 +24,6 @@
 >>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
 =======
 >>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-=======
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
 table {
     border-top: 1px solid black;
     width: 100%;
@@ -41,29 +34,17 @@ table tr {
     line-height: 35px;
 }
 
-<<<<<<< HEAD
 .content-table a{
-=======
-.content_table a{
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     text-decoration: none;
     color: black;
 }
 
-<<<<<<< HEAD
 .content-table>td {
-=======
-.content_table>td {
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     padding: 0;
     border-bottom: 1px solid lightgray;
 }
 
-<<<<<<< HEAD
 .content-table:first-child td {
-=======
-.content_table:first-child td {
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     border-top: 1px solid lightgray;
 }
 
@@ -71,11 +52,7 @@ table tr {
     width: 10%;
 }
 
-<<<<<<< HEAD
 .article-title {
-=======
-.article_title {
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     width: 50%;
 }
 
@@ -83,40 +60,24 @@ table tr {
     width: 20%;
 }
 
-<<<<<<< HEAD
 .writed-date {
     width: 20%;
 }
 
 #writing-div {
-=======
-.writed_date {
-    width: 20%;
-}
-
-#writing_div {
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     width: 100%;
     margin-top: 20px;
     position: relative;
 }
 
-<<<<<<< HEAD
 #writing-div a {
-=======
-#writing_div a {
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     text-decoration: none;
     color: black;
     text-align: center;
     line-height: 30px;
 }
 
-<<<<<<< HEAD
 #writing-button {
-=======
-#writing_button {
->>>>>>> fbe24cb36204668c1697cfc81573d2174fc9f339
     width: 100px;
     height: 30px;
     border: 1px solid gray;

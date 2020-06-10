@@ -10,7 +10,7 @@
     margin: 10px 0;
 }
 
-#logo img {
+#logo {
     width: 100px;
 }
 
@@ -25,19 +25,7 @@
     color: black;
     padding: 0 10px;
     font-weight: 500;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}ㄴ
-=======
 }
->>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-=======
-}
->>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-=======
-}
->>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
 
 #main-banner {
     height: 200px;

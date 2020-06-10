@@ -1,39 +1,46 @@
-#main_banner {
-    position: relative;
+#main-banner {
+    height : auto;
 }
 
-.setting_button {
+#banner_change_form {
+    margin-left: auto;
+    text-align: right ;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.setting-button {
     width: 100px;
     height: 30px;
     background-color: white;
 }
 
-#setting_banner {
+#setting-banner {
     position: absolute;
     top: 20px;
     right: 20px
 }
 
-#add_menu {
+#add-menu {
     display: block;
     margin: 20px auto;
 }
 
-#main_content {
+#main-content {
     position: relative;
 }
 
-#main_content_decorate {
+#main-content-decorate {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
-#main_group {
+#main-group {
     position: relative;
 }
 
-#change_save {
+#change-save {
     position: absolute;
     bottom: 10px;
     right: 20px;
