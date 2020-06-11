@@ -27,7 +27,7 @@
         <div id="main-banner">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <img src="{{ banner_image }}" alt="banner_image" />
+                <img src="{{ banner_image }}" alt="배너 이미지를 설정해주세요"/>
                 <div id="banner_change_form">
                     {{ banner_form.as_p }}
                     <button type="submit">배너 변경</button>
