@@ -59,11 +59,12 @@
 
             <div id="main-group">
                 <div id="main-content">{{ user_info.nickname }}님의 카페에 오신 것을 환영합니다</div>
-                <div id="ad">
-                <a href="https://likelion.net/">
-                    <img src="{% static 'img/likelion_pnu.png' %}">
-                    <div id="sponsor">Sponsored</div>
-                </div></a>
+                <div class="ad-container">
+                    <a href="https://likelion.net/">
+                        <img src="{% static 'img/likelion_pnu.png' %}" id="ad">
+                        <div id="sponsor">Sponsored</div>
+                    </a>
+                </div>
                 <div id="cafe-contents">전체글보기</div>
             </div>
             </div>

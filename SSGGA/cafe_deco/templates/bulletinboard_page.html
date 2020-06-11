@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <a href="./cafe_main.html"><div id="main-banner">메인 배너</div></a>
+        <a href="{% url 'cafe_main' %}"><div id="main-banner"><img src="{{ image }}" alt=""></div></a>
 
         <div id="content-area">
 
@@ -83,8 +83,6 @@
                         <a href="{% url 'createpost' %}"><div id="writing-button">글쓰기</div></a>
                     </div>
 
-                <div id="writing-div">
-                    <a href="{% url 'createpost' %}"><div id="writing-button">글쓰기</div></a>
                 </div>
             </div>
         </div>
