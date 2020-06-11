@@ -127,7 +127,7 @@
 
 #main-content {
     height: 300px;
-    background-color: yellow;
+    /* background-color: yellow; */
     box-sizing: border-box;
     margin-bottom: 20px;
    
@@ -162,6 +162,6 @@
 
 #cafe-contents {
     height: 200px;
-    background-color: navajowhite;
+    /* background-color: navajowhite; */
     margin-top: 20px;
 }

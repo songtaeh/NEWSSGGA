@@ -32,7 +32,7 @@
                         <div id="my-picture">
                             <img src="{{ user_info.image }}" alt="user_img" id="my-picture-size">
                         </div>
-                        <h3 id="nick-name">{{ profile.nickname }}</h3>
+                        <h3 id="nick-name">{{ user_info.nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>
@@ -45,7 +45,7 @@
                         <ul id="favorite-menu"><a href="">즐겨찾는 게시판</a></ul>
                     </div>
                     <div class="cafe-menu">
-                        <ul><a href="">전체글보기</a></ul>
+                        <ul><a href="{% url 'bulletinboard_page' %}">전체글보기</a></ul>
                     </div>
                     <div class="cafe-menu">
                         <ul><a href="">자유게시판</a></ul>
@@ -55,7 +55,7 @@
 
             <div id="main-group">
                     <div id="bulletinboard-title">
-                        전체게시판
+                        전체글보기
                     </div>
 
                     <div class="bulletinboard-table">

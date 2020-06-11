@@ -12,13 +12,13 @@ def load_banner_img():
     else:
         return  ""
 
-def user_account(request):
-    user_info = Profile.objects.all()
-    name = user_info.name
-    nickname = user_info.nickname
-    image = user_info.image
+# def user_account(request):
+#     user_info = Profile.objects.all()
+#     name = user_info.name
+#     nickname = user_info.nickname
+#     image = user_info.image
 
-    return render(request, 'cafe_main.html', {'user_info':user_info})
+#     return render(request, 'cafe_main.html', {'user_info':user_info})
 
 def cafe_main(request):
     
@@ -26,9 +26,12 @@ def cafe_main(request):
 
     user_info = Profile.objects.all()
 
+    all_post = Board.objects.all()
+
     return render(request, 'cafe_main.html', {
         "banner_image": banner_image,
         'user_info': user_info,
+        'all_post':all_post,
     })
 
     # welcome_image_obj = WelcomImage.objects.last()
@@ -47,9 +50,12 @@ def cafe_main_admin(request):
 
     user_info = Profile.objects.all()
 
+    all_post = Board.objects.all()
+
     return render(request, 'cafe_main_admin.html', {
         "banner_image": banner_image,  
         'user_info': user_info,
+        'all_post': all_post,
     })
 
     # welcome_image_obj = WelcomImage.objects.last()
@@ -100,8 +106,10 @@ def cafe_setting(request):
     #         welcome_image_form.save()
 
     user_info = Profile.objects.all()
+
+    all_post = Board.objects.all()
     
-    return redirect("cafe_main", {'user_info':user_info})
+    return redirect("cafe_main", {'user_info':user_info, 'all_post':all_post})
 
 def bulletinboard_page(request):
 
