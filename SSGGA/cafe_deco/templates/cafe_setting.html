@@ -66,16 +66,21 @@
 
             <div id="main-group">
                 <div id="main-content">
+                    <div id="main-content">
+                        <div id="welcome">
+                            <img src="{% static 'img/welcome.jpg' %}" id="welcome-img">
+                            <!-- <span id="welcome-statement">카페에 오신 것을 환영합니다</span> -->
+                        </div>
+                    </div>
                     <input type="submit" class="setting-button" id="main-content-decorate" value="대문 꾸미기">
                 </div>
-                <div id="ad">
+                <div class="ad-container">
                     <a href="https://likelion.net/">
-                        <img src="{% static 'img/likelion_pnu.png' %}" id="ad-img">
+                        <img src="{% static 'img/likelion_pnu.png' %}" id="ad">
                         <div id="sponsor">Sponsored</div>
                     </a>
                 </div>
                 <div id="cafe-contents">전체글보기</div>
-                <a href="{% url 'change_save' %}"><input type="submit" class="setting-button" id="change-save" value="변경 완료"></a>
             </div>
 
         </div>
