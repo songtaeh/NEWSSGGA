@@ -39,9 +39,3 @@
 #main-group {
     position: relative;
 }
-
-#change-save {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-}

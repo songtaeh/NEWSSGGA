@@ -12,19 +12,19 @@
 
 <body>
     <div class="container">
-
         <div id="nav-bar">
-            <a href="{% url 'mainpage' %}" ><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
+            <a href="{% url 'mainpage' %}"><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
-                <a href="{% url 'logout' %}" id="log-out">Log Out</a>
+                {% if isAdmin %}
+                <a href="{% url 'cafe_setting' %}" id="profile">Setting</a>
+                {% endif %}
+                <a href="{% url 'logout' %}" id="log_out">Log Out</a>
             </div>
         </div>
 
         <div id="main-banner">
-            <a href="{% url 'cafe_main' %}">
-            <img src="{{ image }}" alt="banner_image" />
-            </a>
+
         </div>
 
         <div id="content-area">
@@ -35,7 +35,7 @@
                         <div id="my-picture">
                             <img src="{% static 'img/user_default_img.png' %}" alt="user_img">
                         </div>
-                        <h3 id="nick-name">{{ user_info.nickname }}</h3>
+                        <h3 id="nick-name">{{ profile.nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>
@@ -57,16 +57,23 @@
             </div>
 
             <div id="main-group">
-                <div id="main-content">{{ user_info.nickname }}님의 카페에 오신 것을 환영합니다</div>
-                <div id="ad">
-                <a href="https://likelion.net/">
-                    <img src="{% static 'img/likelion_pnu.png' %}">
-                    <div id="sponsor">Sponsored</div>
-                </div></a>
+                <div id="main-content">
+                    <div id="welcome">
+                        <img src="{% static 'img/welcome.jpg' %}" id="welcome-img">
+                        <!-- <span id="welcome-statement">카페에 오신 것을 환영합니다</span> -->
+                    </div>
+                </div>
+                <div class="ad-container">
+                    <a href="https://likelion.net/">
+                        <img src="{% static 'img/likelion_pnu.png' %}" id="ad">
+                        <div id="sponsor">Sponsored</div>
+                    </a>
+                </div>
                 <div id="cafe-contents">전체글보기</div>
             </div>
-
         </div>
+
+    </div>
 
     </div>
 

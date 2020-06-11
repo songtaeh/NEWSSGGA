@@ -19,8 +19,8 @@ from django.urls import path
 from myapp.views import mainpage
 from cafeapp.views import createcafe, searchcafe
 from account.views import signup, update_profile
-from cafe_deco.views import cafe_main, cafe_main_admin, cafe_setting, bulletinboard_page, change_save
-from board.views import createpost, board, post, cafemain, deletepost, update
+from cafe_deco.views import cafe_main, cafe_setting, bulletinboard_page
+from board.views import createpost, board, post, deletepost, update
 from django.contrib.auth.views import LoginView, LogoutView
 
 from django.conf import settings
@@ -43,15 +43,14 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name="logout"),
     path('createpost/', createpost, name="createpost"),
     path('board/', board, name="board"),
-    path('cafemain/<int:i_id>', cafemain, name="cafemain"),
+    # path('cafemain/<int:i_id>', cafemain, name="cafemain"),
     path('post/<int:post_id>', post, name="post"),
     path('deletepost/<int:post_id>/', deletepost, name="deletepost"),
     path('update/<int:post_id>/', update, name="update"),
     path('searchcafe/',searchcafe,name="searchcafe"),
-    path('cafe_main/',cafe_main,name="cafe_main"),
-    path('cafe_main_admin/',cafe_main_admin,name="cafe_main_admin"),
+    path('cafe_main/<int:cafe_id>',cafe_main,name="cafe_main"),
+    # path('cafe_main_admin/',cafe_main_admin,name="cafe_main_admin"),
     path('cafe_setting/',cafe_setting,name="cafe_setting"),
-    path('change_save/',change_save,name="change_save"),
     path('bulletinboard_page/',bulletinboard_page,name="bulletinboard_page"),
     # path('mypost/', mypost, name="mypost_page"),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

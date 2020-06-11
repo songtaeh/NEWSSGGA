@@ -4,6 +4,7 @@ from django.http import Http404
 from account.models import Profile
 from django.contrib.auth.models import User
 # Create your views here.
+# 안녕
 
 def mainpage(request):
     try:

@@ -11,7 +11,9 @@ def createcafe(request):
         print(cafeform.errors)
         if cafeform.is_valid():
             print(cafeform.errors)
-            cafeform.save()
+            temp = cafeform.save(commit=False)  # 저장 잠깐 지연
+            temp.adminuser = request.user   # user정보 받아오기
+            temp.save() # 저장하기
             return redirect('mainpage')
     cafeform = CafeForm()
 
