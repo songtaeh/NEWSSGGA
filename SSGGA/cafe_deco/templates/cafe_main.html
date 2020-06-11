@@ -33,11 +33,20 @@
             <div id="menu-group">
                 <div id="info-menu-container">
                     <div id="my-info">
+
+                        {%if user.is_authenticated%}
                         <div id="my-picture">
                             <img src="{{ profile.image.url }}" alt="user-img" id="my-picture-size">
+                            <h3 id="nick-name">{{ profile.nickname }}</h3>
                         </div>
-                        <h3 id="nick-name">{{ profile.nickname }}</h3>
+                        {%else%}
+                        <div id="my-picture">
+                            <img src="/static/img/user_default_img.png" alt="user-img" id="my-picture-size">
+                            <h3 id="nick-name">익명</h3>
+                        </div>
+                        {%endif%}
                     </div>
+
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>
                         <div class="my-menu"><a href="">댓글 단 글</a></div>
@@ -85,19 +94,19 @@
                             </thead>
                             <tbody>
                                 {% for post in all_post %}
-                                    <tr class="content-table">
+                                <tr class="content-table">
                                     <td class="number">{{post.id}} </td>
                                     <td class="article-title"><a href="{% url 'post' post.id %}">{{post.title}}</a></td>
                                     <td class="writer">{{post.nickname}}</td>
                                     <td class="writed-date">{{post.created_at}}</td>
-                                {% endfor %}
+                                    {% endfor %}
                             </tbody>
                         </table>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 
     </div>
 

@@ -22,28 +22,52 @@ def load_banner_img():
 #     return render(request, 'cafe_main.html', {'user_info':user_info})
 
 def cafe_main(request, cafe_id):
-    
-    user = request.user
-    profile = user.profile
-    all_post = Board.objects.all()
-    image_obj = BannerImage.objects.last()
+    try:
+        # user정보 받기
+        user = request.user
+        profile = user.profile
 
-    if image_obj:
-        url = image_obj.image.url
-    else:
-        url = ""
+        all_post = Board.objects.all()
+        image_obj = BannerImage.objects.last()
 
-    thisuser = request.user
+        if image_obj:
+            url = image_obj.image.url
+        else:
+            url = ""
 
-    cafe = Cafe.objects.get(pk=cafe_id)
-    adminuser = cafe.adminuser
+        thisuser = request.user
 
-    if thisuser==adminuser:
-        isAdmin = True
-    else:
-        isAdmin = False
-        
-    context ={'image': url, 'isAdmin':isAdmin, 'profile':profile, 'all_post':all_post}
+        cafe = Cafe.objects.get(pk=cafe_id)
+        adminuser = cafe.adminuser
+
+        if thisuser==adminuser:
+            isAdmin = True
+        else:
+            isAdmin = False
+
+        context ={'image': url, 'isAdmin':isAdmin, 'profile':profile, 'all_post':all_post}
+
+    except:
+        # user 정보 없으면 걍 받지말기
+        all_post = Board.objects.all()
+        image_obj = BannerImage.objects.last()
+
+        if image_obj:
+            url = image_obj.image.url
+        else:
+            url = ""
+
+        thisuser = request.user
+
+        cafe = Cafe.objects.get(pk=cafe_id)
+        adminuser = cafe.adminuser
+
+        if thisuser==adminuser:
+            isAdmin = True
+        else:
+            isAdmin = False
+
+        context ={'image': url, 'isAdmin':isAdmin, 'all_post':all_post}
 
     return render(request, 'cafe_main.html', context)
 
