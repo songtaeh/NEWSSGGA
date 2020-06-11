@@ -26,9 +26,9 @@
         <div id="main-banner">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <img src="{{ image }}" alt="banner_image" />
+                <img src="{{ banner_image }}" alt="banner_image" />
                 <div id="banner_change_form">
-                    {{ form.as_p }}
+                    {{ banner_form.as_p }}
                     <button type="submit">배너 변경</button>
                 </div>
             </form>
@@ -69,10 +69,16 @@
                     <div id="main-content">
                         <div id="welcome">
                             <img src="{% static 'img/welcome.jpg' %}" id="welcome-img">
-                            <!-- <span id="welcome-statement">카페에 오신 것을 환영합니다</span> -->
+                            <!-- <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <img src="{{ welcome_image }}" alt="welcome_image" />
+                                <div id="welcome_image_form">
+                                    {{ welcome_image_form.as_p }}
+                                    <button type="submit">배너 변경</button>
+                                </div>
+                            </form> -->
                         </div>
                     </div>
-                    <input type="submit" class="setting-button" id="main-content-decorate" value="대문 꾸미기">
                 </div>
                 <div class="ad-container">
                     <a href="https://likelion.net/">
