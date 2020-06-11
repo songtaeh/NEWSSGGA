@@ -41,7 +41,7 @@
     {%for b in searchcafe%}
         <div class="cafe">
             <div class="first">
-                <a href="{%url 'cafemain' b.id%}"><div class="cafe_1">{{b.title}}</div></a>
+                <a href="{%url 'cafe_main' b.id%}"><div class="cafe_1"><img id="cafe_img" src="{{b.image.url}}"></div></a>
                 <div class="exp_1">{{b.Explain}}</div>
             </div>
         </div>

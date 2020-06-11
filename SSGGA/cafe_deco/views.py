@@ -3,6 +3,7 @@ from .forms import BannerForm
 from .models import BannerImage
 from board.models import Board
 from account.models import Profile
+from cafeapp.models import Cafe
 
 # Create your views here.
 def load_banner_img():
@@ -20,43 +21,30 @@ def load_banner_img():
 
 #     return render(request, 'cafe_main.html', {'user_info':user_info})
 
-def cafe_main(request):
+def cafe_main(request, cafe_id):
     
-    banner_image = load_banner_img()
-
     user_info = Profile.objects.all()
-
     all_post = Board.objects.all()
+    image_obj = BannerImage.objects.last()
 
-    return render(request, 'cafe_main.html', {
-        "banner_image": banner_image,
-        'user_info': user_info,
-        'all_post':all_post,
-    })
+    if image_obj:
+        url = image_obj.image.url
+    else:
+        url = ""
 
-    # welcome_image_obj = WelcomImage.objects.last()
-    # if image_obj:
-    #     welcome_img = welcome_image_obj.image.url
-    # else:
-    #     welcome_img = ""
+    thisuser = request.user
 
-    # return render(request, 'cafe_main_admin.html', {
-    #     'welcome_image': welcome_img,
-    # })
+    cafe = Cafe.objects.get(pk=cafe_id)
+    adminuser = cafe.adminuser
 
-def cafe_main_admin(request):
+    if thisuser==adminuser:
+        isAdmin = True
+    else:
+        isAdmin = False
+        
+    context ={'image': url, 'isAdmin':isAdmin, 'user_info':user_info, 'all_post':all_post}
 
-    banner_image = load_banner_img()
-
-    user_info = Profile.objects.all()
-
-    all_post = Board.objects.all()
-
-    return render(request, 'cafe_main_admin.html', {
-        "banner_image": banner_image,  
-        'user_info': user_info,
-        'all_post': all_post,
-    })
+    return render(request, 'cafe_main.html', context)
 
     # welcome_image_obj = WelcomImage.objects.last()
     # if image_obj:

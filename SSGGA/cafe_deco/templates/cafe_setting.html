@@ -43,7 +43,7 @@
                         <div id="my-picture">
                             <img src="{{user_info.image}}" alt="user_img">
                         </div>
-                        <h3 id="nick-name">{{ nickname }}</h3>
+                        <h3 id="nick-name">{{ user_info.nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>
@@ -70,14 +70,6 @@
                     <div id="main-content">
                         <div id="welcome">
                             <img src="{% static 'img/welcome.jpg' %}" id="welcome-img">
-                            <!-- <form method="post" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                <img src="{{ welcome_image }}" alt="welcome_image" />
-                                <div id="welcome_image_form">
-                                    {{ welcome_image_form.as_p }}
-                                    <button type="submit">배너 변경</button>
-                                </div>
-                            </form> -->
                         </div>
                     </div>
                 </div>
