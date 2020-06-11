@@ -10,15 +10,15 @@
 <body>
     <div class="container">
         <div>
-            <h1>카페 만들기</h1>
-            <p>나와 같은 관심사를 가진 멤버를 모집하고 열심히 운영하여 카페를 성장시켜보세요</p>
+            <h1>🙋‍♀️카페 만들기</h1>
+            <p>나와 같은 관심사를 가진 멤버를 모집하고 열심히 운영하여 카페를 성장시켜보세요🧙‍♀️</p>
             <hr>
         </div>
         <div class="cafename">
             <form method="POST">
                 {% csrf_token%}
                 {{CafeForm.as_p}}
-                <input id=submitbtn type="submit" value="생성">
+                <input id="submit_btn" type="submit" value="생성">
             </form>
     </div>
 </body>

@@ -6,6 +6,18 @@ from django.http import Http404
 from django.contrib.auth.models import User
 from account.models import Profile
 # Create your views here.
+def cafemain(request, i_id):
+    try :
+        i = Cafe.objects.get(pk=i_id)
+        user = request.user
+        p = user.profile
+
+        context = {'i':i, 'p':p}
+    except :
+        i = Cafe.objects.get(pk=i_id)
+        context = {}
+    return render(request,'cafe_main.html', context)
+
 def createpost(request):
     if request.method == "POST":
         myform = BoardForm(request.POST, request.FILES)
