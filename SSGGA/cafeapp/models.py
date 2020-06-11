@@ -6,13 +6,7 @@ class Cafe(models.Model):
     explain = models.TextField('카페 설명',max_length=1000)
     tag = models.CharField('태그',max_length=30)
     secret = models.BooleanField('공개여부')
-<<<<<<< HEAD
     image = models.ImageField('카페 아이콘', null=True, default="./images/userdefaultimg.png")
-=======
-    image = models.ImageField('카페아이콘', null=True, default="./images/userdefaultimg.png")
-    adminuser = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-
->>>>>>> a8ef9cfdcd249afcbc9ebb951395aa97dc7c6934
 
     def __str__(self):
         return self.title
