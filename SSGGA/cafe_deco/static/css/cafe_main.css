@@ -30,7 +30,7 @@
 #main-banner {
     height: 200px;
     /* background-color: aqua; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: 10px 0;
     margin-bottom: 20px;
 }
@@ -124,6 +124,11 @@
     box-sizing: border-box;
     margin-bottom: 20px;
    
+}
+
+#main-content #welcome-img {
+    width: 890px;
+    height: 300px;
 }
 
 .ad-container {

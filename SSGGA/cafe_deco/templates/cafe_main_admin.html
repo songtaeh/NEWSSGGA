@@ -58,7 +58,12 @@
             </div>
 
             <div id="main-group">
-                <div id="main-content">{{ user_info.nickname }}님의 카페에 오신 것을 환영합니다</div>
+                <div id="main-content">
+                    <div id="welcome">
+                        <img src="{% static 'img/welcome.jpg' %}" id="welcome-img">
+                        <!-- <span id="welcome-statement">카페에 오신 것을 환영합니다</span> -->
+                    </div>
+                </div>
                 <div class="ad-container">
                     <a href="https://likelion.net/">
                         <img src="{% static 'img/likelion_pnu.png' %}" id="ad">
