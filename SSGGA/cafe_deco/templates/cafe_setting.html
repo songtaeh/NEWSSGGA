@@ -15,7 +15,7 @@
     <div class="container">
 
         <div id="nav-bar">
-            <a href="" id="logo"><img src="../taehyeon/logo.png" alt="SSGGA"></a>
+            <a href="{% url 'mainpage' %}" ><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
                 <a href="{% url 'cafe_setting' %}" id="setting">Setting</a>
@@ -68,9 +68,12 @@
                 <div id="main-content">
                     <input type="submit" class="setting-button" id="main-content-decorate" value="대문 꾸미기">
                 </div>
-                <a href="https://likelion.net/"><div id="ad">
-                    <div id="sponsor">Sponsored</div>
-                </div></a>
+                <div id="ad">
+                    <a href="https://likelion.net/">
+                        <img src="{% static 'img/likelion_pnu.png' %}" id="ad-img">
+                        <div id="sponsor">Sponsored</div>
+                    </a>
+                </div>
                 <div id="cafe-contents">전체글보기</div>
                 <a href="{% url 'change_save' %}"><input type="submit" class="setting-button" id="change-save" value="변경 완료"></a>
             </div>

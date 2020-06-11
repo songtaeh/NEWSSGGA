@@ -14,8 +14,9 @@ def cafemain(request, i_id):
 
         context = {'i':i, 'p':p}
     except :
-        raise Http404
-    return render(request,'cafe_main.html', context)
+        i = Cafe.objects.get(pk=i_id)
+        context = {}
+    return render(request,'cafe_main_duplicate.html', context)
 
 def createpost(request):
     if request.method == "POST":

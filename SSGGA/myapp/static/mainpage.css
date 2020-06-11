@@ -1,10 +1,6 @@
-
-body{
-    background: white;
-  }
-
-.nav{
-
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .login{
@@ -20,31 +16,33 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-right: 10px;
+    margin-top: 15px;
+    margin-right: 15px;
   }
   
-.logo{
+.logo-container {
     text-align: center;
 }
 
-#ssgga{
+#ssgga-logo {
     height: 150px;
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 
 .search form{
   width: 100%;
-  position: relative;
+  /* position: relative; */
   display: flex;
 }
 
-.wrap{
-  width: 50%;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.search-bar-container{
+  width: 800px;
+  /* position: absolute; */
+  /* top: 35%; */
+  margin: 30px auto;
+  /* transform: translate(-50%, -50%); */
 }
+
 .searchTerm {
   width: 100%;
   font-size: 18px;
@@ -57,7 +55,7 @@ body{
   outline: none;
 }
 
-.searchButton {
+#searchButton {
   width: 60px;
   height: 50px;
   border: 1px solid rgb(93, 152, 160);
@@ -69,25 +67,34 @@ body{
   font-size: 20px;
 }
 
-#searchimg{
+#search-icon {
   width: 90%;
 }
 
-.cafe{
-    position: absolute;    
-    display: flex;
-    top: 50%;
-    left: 25%;
+#cafe-container {
+  width: 800px;
+  padding: 50px 0;
+  margin: 0 auto; 
 }
-.cafe *.cafe_1{
+
+#cafe-example-container {
+    /* position: absolute;     */
+    display: flex;
+    /* top: 50%;
+    left: 25%; */
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+#cafe-example-container *.cafe-example {
     width: 150px;
     height: 150px;
     /* border: 3px solid #a29bfe; */
     border-radius: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 50px;
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    /* margin-right: 50px; */
 }
 
 .fake_icon {
@@ -95,23 +102,25 @@ body{
   height: 100%;
   border-radius: 10px;
 }
-.cafe_real{
-    position: absolute;    
+
+#cafe-real-container {
+    /* position: absolute;     */
     display: flex;
-    top: 75%;
-    left: 25%;
+    justify-content: space-between;
+    /* top: 75%;
+    left: 25%; */
     font-size: 20px;
-    text-align: center;
-    vertical-align: middle;
+    /* text-align: center;
+    vertical-align: middle; */
 }
-.cafe_real *.cafe_2{
+#cafe-real-container *.cafe-real{
     width: 150px;
     height: 150px;
     border-radius: 10px;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center;
     justify-content: center;
-    margin-right: 50px;
+    margin-right: 50px; */
 }
 
 #cafe_icon {
@@ -119,16 +128,13 @@ body{
   height: 100%;
   border-radius: 10px;
 }
-.cafe_new{
+.cafe_usermade{
     width: 150px;
     height: 150px;
     border: 3px solid #a29bfe;
     border-radius: 10px;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
-    text-align: center;
     display: flex;
 }
 
