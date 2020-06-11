@@ -23,7 +23,8 @@ def load_banner_img():
 
 def cafe_main(request, cafe_id):
     
-    user_info = Profile.objects.all()
+    user = request.user
+    profile = user.profile
     all_post = Board.objects.all()
     image_obj = BannerImage.objects.last()
 
@@ -42,7 +43,7 @@ def cafe_main(request, cafe_id):
     else:
         isAdmin = False
         
-    context ={'image': url, 'isAdmin':isAdmin, 'user_info':user_info, 'all_post':all_post}
+    context ={'image': url, 'isAdmin':isAdmin, 'profile':profile, 'all_post':all_post}
 
     return render(request, 'cafe_main.html', context)
 
