@@ -3,19 +3,19 @@ from .forms import BannerForm
 from .models import BannerImage
 from board.models import Board
 from account.models import Profile
+from cafeapp.models import Cafe
 
 # Create your views here.
 
-def cafe_main(request):
+def cafe_main(request, i_id):
     image_obj = BannerImage.objects.last()
+    i = Cafe.objects.get(pk=i_id)
     if image_obj:
         url = image_obj.image.url
     else:
         url = ""
 
-    return render(request, 'cafe_main.html', {
-        "image": url    
-    })
+    return render(request, 'cafe_main.html', {"image": url, "i":i})
 
 def cafe_main_admin(request):
 
