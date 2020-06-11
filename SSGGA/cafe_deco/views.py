@@ -3,31 +3,30 @@ from .forms import BannerForm
 from .models import BannerImage
 from board.models import Board
 from account.models import Profile
+from cafeapp.models import Cafe
 
 # Create your views here.
 
-def cafe_main(request):
+def cafe_main(request, cafe_id):
     image_obj = BannerImage.objects.last()
     if image_obj:
         url = image_obj.image.url
     else:
         url = ""
 
-    return render(request, 'cafe_main.html', {
-        "image": url    
-    })
+    thisuser = request.user
 
-def cafe_main_admin(request):
+    cafe = Cafe.objects.get(pk=cafe_id)
+    adminuser = cafe.adminuser
 
-    image_obj = BannerImage.objects.last()
-    if image_obj:
-        url = image_obj.image.url
+    if thisuser==adminuser:
+        isAdmin = True
     else:
-        url = ""
+        isAdmin = False
 
-    return render(request, 'cafe_main_admin.html', {
-        "image": url    
-    })
+    context = {'image': url, 'isAdmin':isAdmin}
+    return render(request, 'cafe_main.html', context)
+
 
 def cafe_setting(request):
     if request.method == "GET":
@@ -83,9 +82,9 @@ def bulletinboard_page(request):
 #         'profile': profile,
 #     }
 
-def user_account(request):
-    user_info = Profile.objects.all()
-    name = user_info.name
-    nickname = user_info.nickname
+# def user_account(request):
+#     user_info = Profile.objects.all()
+#     name = user_info.name
+#     nickname = user_info.nickname
 
-    return render(request, 'cafe_main.html', {'user_info':user_info})
+#     return render(request, 'cafe_main.html', {'user_info':user_info})

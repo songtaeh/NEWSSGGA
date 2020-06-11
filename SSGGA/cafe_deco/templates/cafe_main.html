@@ -12,19 +12,19 @@
 
 <body>
     <div class="container">
-
         <div id="nav-bar">
-            <a href="{% url 'mainpage' %}" ><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
+            <a href="{% url 'mainpage' %}"><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
-                <a href="{% url 'logout' %}" id="log-out">Log Out</a>
+                {% if isAdmin %}
+                <a href="{% url 'cafe_setting' %}" id="profile">Setting</a>
+                {% endif %}
+                <a href="{% url 'logout' %}" id="log_out">Log Out</a>
             </div>
         </div>
 
         <div id="main-banner">
-            <a href="{% url 'cafe_main' %}">
-            <img src="{{ image }}" alt="banner_image" />
-            </a>
+
         </div>
 
         <div id="content-area">
@@ -71,8 +71,9 @@
                 </div>
                 <div id="cafe-contents">전체글보기</div>
             </div>
-
         </div>
+
+    </div>
 
     </div>
 
