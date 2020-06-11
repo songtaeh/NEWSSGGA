@@ -5,7 +5,7 @@ class CafeForm(forms.ModelForm):
     
     class Meta:
         model = Cafe
-        fields = '__all__'
+        fields = ['title', 'Explain', 'tag', 'secret', 'image']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
