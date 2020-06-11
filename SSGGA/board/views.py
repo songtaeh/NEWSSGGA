@@ -16,7 +16,7 @@ def cafemain(request, i_id):
     except :
         i = Cafe.objects.get(pk=i_id)
         context = {}
-    return render(request,'cafe_main_duplicate.html', context)
+    return render(request,'cafe_main.html', context)
 
 def createpost(request):
     if request.method == "POST":
