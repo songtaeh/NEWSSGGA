@@ -19,13 +19,8 @@ from django.urls import path
 from myapp.views import mainpage
 from cafeapp.views import createcafe, searchcafe
 from account.views import signup, update_profile
-<<<<<<< HEAD
-from cafe_deco.views import cafe_main, cafe_main_admin, cafe_setting, bulletinboard_page, change_save
-from board.views import createpost, board, post, deletepost, update
-=======
 from cafe_deco.views import cafe_main, cafe_main_admin, cafe_setting, bulletinboard_page
-from board.views import createpost, board, post, cafemain, deletepost, update
->>>>>>> c8413f4a1e7d67a185f6700a4e057bc8acf702a5
+from board.views import createpost, board, post, deletepost, update
 from django.contrib.auth.views import LoginView, LogoutView
 
 from django.conf import settings

@@ -8,14 +8,14 @@ from cafeapp.models import Cafe
 # Create your views here.
 
 def cafe_main(request, i_id):
-    image_obj = BannerImage.objects.last()
     i = Cafe.objects.get(pk=i_id)
+    user_info = Profile.objects.all()
+    image_obj = BannerImage.objects.last()
     if image_obj:
         url = image_obj.image.url
     else:
         url = ""
-
-    return render(request, 'cafe_main.html', {"image": url, "i":i})
+    return render(request, 'cafe_main.html', {"image": url, "i":i, "user_info":user_info})
 
 def cafe_main_admin(request):
 
@@ -83,9 +83,3 @@ def bulletinboard_page(request):
 #         'profile': profile,
 #     }
 
-def user_account(request):
-    user_info = Profile.objects.all()
-    name = user_info.name
-    nickname = user_info.nickname
-
-    return render(request, 'cafe_main.html', {'user_info':user_info})
