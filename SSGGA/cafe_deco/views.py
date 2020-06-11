@@ -105,20 +105,14 @@ def bulletinboard_page(request):
     all_post = Board.objects.all()
 
     user = request.user
-    if user.is_authenticated:
-        profile = request.user.profile
-    else:
-        profile = None
+    profile = user.profile
 
     banner_image = load_banner_img()
-
-    user_info = Profile.objects.all()
 
     return render(request, 'bulletinboard_page.html', {
         'all_post': all_post,
         'profile': profile,
         'banner_image' : banner_image,
-        'user_info':user_info,
     })
 
 # def mypost(request):
