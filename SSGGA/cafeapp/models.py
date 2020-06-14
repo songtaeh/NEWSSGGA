@@ -7,7 +7,7 @@ class Cafe(models.Model):
     tag = models.CharField('태그',max_length=30)
     secret = models.BooleanField('공개여부')
     image = models.ImageField('카페 아이콘', null=True, default="./images/userdefaultimg.png")
-    adminuser = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+    adminuser = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.title
