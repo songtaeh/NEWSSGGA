@@ -6,67 +6,137 @@ from account.models import Profile
 from cafeapp.models import Cafe
 
 # Create your views here.
+def load_banner_img():
+    banner_image_obj = BannerImage.objects.last()
+    if banner_image_obj:
+        return  banner_image_obj.image.url
+    else:
+        return  ""
+
+# def user_account(request):
+#     user_info = Profile.objects.all()
+#     name = user_info.name
+#     nickname = user_info.nickname
+#     image = user_info.image
+
+#     return render(request, 'cafe_main.html', {'user_info':user_info})
 
 def cafe_main(request, cafe_id):
-    image_obj = BannerImage.objects.last()
-    if image_obj:
-        url = image_obj.image.url
-    else:
-        url = ""
+    try:
+        # user정보 받기
+        user = request.user
+        profile = user.profile
 
-    thisuser = request.user
-
-    cafe = Cafe.objects.get(pk=cafe_id)
-    adminuser = cafe.adminuser
-
-    if thisuser==adminuser:
-        isAdmin = True
-    else:
-        isAdmin = False
-
-    context = {'image': url, 'isAdmin':isAdmin}
-    return render(request, 'cafe_main.html', context)
-
-
-def cafe_setting(request):
-    if request.method == "GET":
-        form = BannerForm()
-
+        all_post = Board.objects.all()
         image_obj = BannerImage.objects.last()
+
         if image_obj:
             url = image_obj.image.url
         else:
             url = ""
 
+        thisuser = request.user
+
+        cafe = Cafe.objects.get(pk=cafe_id)
+        adminuser = cafe.adminuser
+
+        if thisuser==adminuser:
+            isAdmin = True
+        else:
+            isAdmin = False
+
+        context ={'image': url, 'isAdmin':isAdmin, 'profile':profile, 'all_post':all_post}
+
+    except:
+        # user 정보 없으면 걍 받지말기
+        all_post = Board.objects.all()
+        image_obj = BannerImage.objects.last()
+
+        if image_obj:
+            url = image_obj.image.url
+        else:
+            url = ""
+
+        thisuser = request.user
+
+        cafe = Cafe.objects.get(pk=cafe_id)
+        adminuser = cafe.adminuser
+
+        if thisuser==adminuser:
+            isAdmin = True
+        else:
+            isAdmin = False
+
+        context ={'image': url, 'isAdmin':isAdmin, 'all_post':all_post}
+
+    return render(request, 'cafe_main.html', context)
+
+    # welcome_image_obj = WelcomImage.objects.last()
+    # if image_obj:
+    #     welcome_img = welcome_image_obj.image.url
+    # else:
+    #     welcome_img = ""
+
+    # return render(request, 'cafe_main_admin.html', {
+    #     'welcome_image': welcome_img,
+    # })
+
+def cafe_setting(request):
+    if request.method == "GET":
+        banner_form = BannerForm()
+
+        banner_image_obj = BannerImage.objects.last()
+        if banner_image_obj:
+            banner_img = banner_image_obj.image.url
+        else:
+            banner_img = ""
+
         return render(request, 'cafe_setting.html', {
-            'form': form,
-            'image': url,
+            'banner_form': banner_form,
+            'banner_image': banner_img,
         })
     elif request.method == "POST":
-        form = BannerForm(request.POST, request.FILES)
-        if form.is_valid:
-            form.save()
-            return redirect("cafe_main")
+        banner_form = BannerForm(request.POST, request.FILES)
+        if banner_form.is_valid:
+            banner_form.save()
+
+    # if request.method == "GET":
+    #     welcome_image_form = WelcomeImageForm()
+
+    #     welcome_image_obj = WelcomeImage.objects.last()
+    #     if welcome_image_obj:
+    #         welcome_img = welcome_image_obj.image.url
+    #     else:
+    #         welcome_img = ""
+
+    #     return render(request, 'cafe_setting.html', {
+    #         'welcome_image_form': welcome_image_form,
+    #         'welcome_image': welcome_img,
+    #     })
+    # elif request.method == "POST":
+    #     welcome_image_form = WelcomeImageForm(request.POST, request.FILES)
+    #     if welcome_image_form.is_valid:
+    #         welcome_image_form.save()
+
+    user_info = Profile.objects.all()
+
+    all_post = Board.objects.all()
+    
+    return redirect("cafe_main", {'user_info':user_info, 'all_post':all_post})
 
 def bulletinboard_page(request):
+
     all_post = Board.objects.all()
 
     user = request.user
-    if user.is_authenticated:
-        profile = request.user.profile
-    else:
-        profile = None
+    profile = user.profile
 
-    image_obj = BannerImage.objects.last()
-    if image_obj:
-        url = image_obj.image.url
-    else:
-        url = ""
+    banner_image = load_banner_img()
 
     return render(request, 'bulletinboard_page.html', {
         'all_post': all_post,
         'profile': profile,
-        'image' : url,
+        'banner_image' : banner_image,
     })
 
 # def mypost(request):
@@ -81,10 +151,3 @@ def bulletinboard_page(request):
 #         'all_post': posts,
 #         'profile': profile,
 #     }
-
-# def user_account(request):
-#     user_info = Profile.objects.all()
-#     name = user_info.name
-#     nickname = user_info.nickname
-
-#     return render(request, 'cafe_main.html', {'user_info':user_info})

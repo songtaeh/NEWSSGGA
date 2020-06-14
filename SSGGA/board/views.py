@@ -26,8 +26,11 @@ def createpost(request):
             return redirect('bulletinboard_page')
     myform = BoardForm()
 
+    user = request.user 
+    profile = user.profile
+
     all_post = Board.objects.all()
-    context = {'take_all_post':all_post}
+    context = {'take_all_post':all_post, 'profile':profile}
     return render(request, 'createpost.html', context)
 
 def deletepost(request, post_id):

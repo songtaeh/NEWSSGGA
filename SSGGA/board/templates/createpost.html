@@ -31,9 +31,9 @@
                 <div id="info-menu-container">
                     <div id="my-info">
                         <div id="my-picture">
-                            사진
+                            <img src="{{ profile.image.url }}" alt="user_img" id="my-picture-size">
                         </div>
-                        <h3 id="nick-name">닉네임</h3>
+                        <h3 id="nick-name">{{profile.nickname}}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>

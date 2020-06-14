@@ -26,38 +26,44 @@ body{
     }
 .search form{
     width: 100%;
-    position: relative;
+    /* position: relative; */
     display: flex;
     }
     
     .searchTerm {
     width: 100%;
+    font-size: 18px;
     border: 3px solid #a29bfe;
     border-right: none;
-    padding: 5px;
-    height: 20px;
+    padding: 2px;
+    padding-left: 8px;
+    height: 40px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #9DBFAF;
     }
     #cafe_img{
         margin-top: 1px;
-        height: 150px;
+        height: 149px;
         width: 149px;
         border-radius: 10px;
     }
     
     .searchButton {
-    width: 40px;
-    height: 36px;
+    width: 60px;
+    height: 50px;
     border: 1px solid rgb(93, 152, 160);
     background: #a29bfe;
     text-align: center;
-    color: #fff;
+    color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
     }
+
+    #search-icon {
+        width: 90%;
+    }
+
     .wrap{
     width: 50%;
     position: absolute;
@@ -69,7 +75,7 @@ body{
 .cafe{ 
     position: relative;
     top: 250px;
-    left: 23%;
+    left: 26%;
     font-size: 50px;
 }
 .cafe *.first{
@@ -80,19 +86,40 @@ body{
 }
 .first{
     display: inline-flex;
+    
 }
 .exp_1{
     width: 550px;
     height: 150px;
-    border: 3px solid #a29bfe;
-    border-radius: 10px;
-    vertical-align: middle;
+    /* border: 3px solid #a29bfe;
+    border-radius: 10px; */
+    font: 100px;
+    text-align: left;
+    text-decoration: none;
+    color: black;
 }
-
+.exp_1 h4{
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.exp_1 h5{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.exp_1 h6{
+    font-size: 18px;
+    margin-top: 30px;
+}
+a {
+    text-decoration: none;
+}
 .cafe *.cafe_1{
     width: 150px;
     height: 150px;
-    border: 3px solid #a29bfe;
+    border: 1px solid #a29bfe;
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
@@ -101,7 +128,7 @@ body{
 }
 h2 {
     position: absolute;
-    top: 32%;
-    left: 25%;
+    top: 34%;
+    left: 27%;
     font-size: 20px;
 }
