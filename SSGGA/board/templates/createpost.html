@@ -14,10 +14,10 @@
     <div class="container">
 
         <div id="nav-bar">
-            <a href="" id="logo">SSG-GA</a>
+            <a href="{% url 'mainpage' %}"><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
-                <a href="" id="log-out">Log Out</a>
+                <a href="{% url 'logout' %}" id="log-out">Log Out</a>
             </div>
         </div>
 
@@ -66,19 +66,7 @@
                             <div id="info">
                                 <tr>
                                     <th>닉네임: </th>
-<!-- <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD -->
                                     <td><input id="nickname" type="text" placeholder="닉네임" name="nickname" /></td>
-<!-- ======= -->
-                                    <!-- <td><input id="nickname" type="text" placeholder="닉네임" name="nickname" /></td> -->
-<!-- >>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-======= -->
-                                    <!-- <td><input id="nickname" type="text" placeholder="닉네임" name="nickname" /></td> -->
-<!-- >>>>>>> 6d7751a89a5274387fba793eb798066690810a6d
-======= -->
-                                    <!-- <td><input id="nickname" type="text" placeholder="닉네임" name="nickname" /></td> -->
-<!-- >>>>>>> 6d7751a89a5274387fba793eb798066690810a6d -->
                                 </tr>
                                 <tr>
                                     <th>비밀번호: </th>
