@@ -1,5 +1,5 @@
 body{
-    background: #f2f2f2;
+    background: white;
   }
 .nav{
     justify-content: space-between;
@@ -15,7 +15,7 @@ body{
 #login {
     background-color: #a29bfe;
     border: none;
-    color: black;
+    color: white;
     padding: 10px 17px;
     border-radius: 10px;
     text-align: center;
