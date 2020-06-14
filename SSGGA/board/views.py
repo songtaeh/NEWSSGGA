@@ -19,19 +19,30 @@ def cafemain(request, i_id):
     return render(request,'cafe_main.html', context)
 
 def createpost(request, cafe_id):
-    if request.method == "POST":
-        myform = BoardForm(request.POST, request.FILES)
-        if myform.is_valid():
-            myform.save()
-            return redirect('/bulletinboard_page/{}'.format(cafe_id))
-    myform = BoardForm()
+    try:
+        user = request.user
+        profile = user.profile
 
-    user = request.user 
-    profile = user.profile
+        if request.method == "POST":
+            myform = BoardForm(request.POST, request.FILES)
+            if myform.is_valid():
+                myform.save()
+                return redirect('/bulletinboard_page/{}'.format(cafe_id))
+        myform = BoardForm()
 
-    all_post = Board.objects.all()
-    context = {'take_all_post':all_post, 'profile':profile}
-    return render(request, 'createpost.html', context)
+        all_post = Board.objects.all()
+        context = {'take_all_post':all_post, 'profile':profile}
+        return render(request, 'createpost.html', context)
+    except:
+        if request.method == "POST":
+            myform = BoardForm(request.POST, request.FILES)
+            if myform.is_valid():
+                myform.save()
+                return redirect('/bulletinboard_page/{}'.format(cafe_id))
+
+        all_post = Board.objects.all()
+        context = {'take_all_post':all_post}
+        return render(request, 'createpost.html', context)
 
 def deletepost(request, cafe_id, post_id):
     my_post = Board.objects.get(pk=post_id)
@@ -40,30 +51,56 @@ def deletepost(request, cafe_id, post_id):
     return redirect('/bulletinboard_page/{}'.format(cafe_id))  
 
 def update(request, cafe_id, post_id):
-    my_post = Board.objects.get(pk=post_id)
-    if request.method == "POST":
-        update_form = BoardForm(request.POST, instance=my_post)
-        if update_form.is_valid()==True:
-            update_form.save()
+    try:
+        user = request.user
+        profile = user.profile
 
-            return redirect('/bulletinboard_page/{}'.format(cafe_id))
-        # 검사를 꼭 해주어야 save를 사용할 수 있다.
-    # object를 안에다가 넣어준다
-    update_form = BoardForm(instance=my_post)
+        my_post = Board.objects.get(pk=post_id)
+        if request.method == "POST":
+            update_form = BoardForm(request.POST, instance=my_post)
+            if update_form.is_valid()==True:
+                update_form.save()
 
-    return render(request, 'update.html', {'update_form': update_form, 'my_post': my_post})    
+                return redirect('/bulletinboard_page/{}'.format(cafe_id))
+            # 검사를 꼭 해주어야 save를 사용할 수 있다.
+        # object를 안에다가 넣어준다
+        update_form = BoardForm(instance=my_post)
+
+        return render(request, 'update.html', {'update_form': update_form, 'my_post': my_post, 'profile':profile})    
+    except:
+        my_post = Board.objects.get(pk=post_id)
+        if request.method == "POST":
+            update_form = BoardForm(request.POST, instance=my_post)
+            if update_form.is_valid()==True:
+                update_form.save()
+
+                return redirect('/bulletinboard_page/{}'.format(cafe_id))
+            # 검사를 꼭 해주어야 save를 사용할 수 있다.
+        # object를 안에다가 넣어준다
+        update_form = BoardForm(instance=my_post)
+
+        return render(request, 'update.html', {'update_form': update_form, 'my_post': my_post})    
 
 # def board(request):
 
 #     return render(request, 'board.html')    
 
 def post(request, cafe_id, post_id):
-    my_post = Board.objects.get(pk=post_id)
+    try:
+        user = request.user
+        profile = user.profile
 
-    cafe = Cafe.objects.get(pk=cafe_id)
+        my_post = Board.objects.get(pk=post_id)
 
-    return render(request, 'post.html', {'my_post':my_post, 'cafe':cafe})
+        cafe = Cafe.objects.get(pk=cafe_id)
 
+        return render(request, 'post.html', {'my_post':my_post, 'cafe':cafe, 'profile':profile})
+    except:
+        my_post = Board.objects.get(pk=post_id)
+
+        cafe = Cafe.objects.get(pk=cafe_id)
+
+        return render(request, 'post.html', {'my_post':my_post, 'cafe':cafe})
 
 
 # def iscorrect(request):
