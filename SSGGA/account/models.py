@@ -30,7 +30,7 @@ class Profile(models.Model):
     phone = models.CharField('전화번호', max_length=20)
     gender = models.CharField('성별', choices=M_or_F, max_length=2)
     email = models.EmailField('이메일', max_length=254)
-    image = models.ImageField('(선택) 프로필사진', null=True, default="./images/userdefaultimg.png")
+    image = models.ImageField('(선택) 프로필사진', null=True, default="SSGGA/static/img/user_default_img.png")
 
     def __str__(self):
         return self.name

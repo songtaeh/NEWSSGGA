@@ -6,7 +6,7 @@ class Cafe(models.Model):
     explain = models.TextField('카페 설명',max_length=1000, null=True)
     tag = models.CharField('태그',max_length=30)
     secret = models.BooleanField('공개여부')
-    image = models.ImageField('카페 아이콘', null=True, default="./static/img/userimg.png")
+    image = models.ImageField('카페 아이콘', null=True, default="SSGGA/static/img/user_default_img.png")
     adminuser = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
