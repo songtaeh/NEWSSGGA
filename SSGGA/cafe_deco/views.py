@@ -83,7 +83,7 @@ def cafe_main(request, cafe_id):
     #     'welcome_image': welcome_img,
     # })
 
-def cafe_setting(request):
+def cafe_setting(request, cafe_id):
     if request.method == "GET":
         banner_form = BannerForm()
 
@@ -93,9 +93,15 @@ def cafe_setting(request):
         else:
             banner_img = ""
 
+        try:
+            cafe = Cafe.objects.get(pk=cafe_id)
+        except Cafe.DoesNotExists:
+            cafe = None
+
         return render(request, 'cafe_setting.html', {
             'banner_form': banner_form,
             'banner_image': banner_img,
+            'cafe': cafe,
         })
     elif request.method == "POST":
         banner_form = BannerForm(request.POST, request.FILES)
@@ -120,11 +126,11 @@ def cafe_setting(request):
     #     if welcome_image_form.is_valid:
     #         welcome_image_form.save()
 
-    user_info = Profile.objects.all()
+        user_info = Profile.objects.all()
 
-    all_post = Board.objects.all()
-    
-    return redirect("cafe_main", {'user_info':user_info, 'all_post':all_post})
+        all_post = Board.objects.all()
+        
+        return redirect("cafe_main", cafe_id)
 
 def bulletinboard_page(request, cafe_id):
 
