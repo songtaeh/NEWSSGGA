@@ -13,8 +13,6 @@ def createcafe(request):
             print(cafeform.errors)
             temp = cafeform.save(commit=False)  # 저장 잠깐 지연
             temp.adminuser = request.user   # user정보 받아오기
-            temp.image.save()
-            print(request.user)
             temp.save() # 저장하기
             return redirect('mainpage')
     cafeform = CafeForm()
