@@ -28,9 +28,9 @@
                 <div id="info-menu-container">
                     <div id="my-info">
                         <div id="my-picture">
-                            사진
+                            <img src="{{ profile.image.url }}" alt="user_img" id="my-picture-size">
                         </div>
-                        <h3 id="nick-name">닉네임</h3>
+                        <h3 id="nick-name">{{ profile.nickname }}</h3>
                     </div>
                     <div id="my-menu-container">
                         <div class="my-menu"><a href="">내가 쓴 글</a></div>
@@ -78,19 +78,19 @@
                             <div id = "buttom">
                                 <div id ="buttom_content">
                                     {% if user.is_authenticated %}
-                                    <a href="{% url 'update' my_post.id %}">
+                                    <a href="{% url 'update' cafe.id my_post.id %}">
                                     <button id="update">수정</button>
                                     </a>
-                                    <a href="{% url 'deletepost' my_post.id %}">
+                                    <a href="{% url 'deletepost' cafe.id my_post.id %}">
                                         <button id="delete">삭제</button>
                                     </a>
                                     {% else %}
                                     <label for="password">비밀번호: </label>
                                     <input id="password" type="password" placeholder="●●●●">
-                                    <a href="{% url 'update' my_post.id %}">
+                                    <a href="{% url 'update' cafe.id my_post.id %}">
                                         <button id="update">수정</button>
                                     </a>
-                                    <a href="{% url 'deletepost' my_post.id %}">
+                                    <a href="{% url 'deletepost' cafe.id my_post.id %}">
                                         <button id="delete">삭제</button>
                                     </a>
                                     {% endif %}

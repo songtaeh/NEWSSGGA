@@ -75,7 +75,7 @@
                                 {% for post in all_post %}
                                     <tr class="content-table">
                                     <td class="number">{{post.id}} </td>
-                                    <td class="article-title"><a href="{% url 'post' post.id %}">{{post.title}}</a></td>
+                                    <td class="article-title"><a href="{% url 'post' cafe.id post.id %}">{{post.title}}</a></td>
                                     <td class="writer">{{post.nickname}}</td>
                                     <td class="writed-date">{{post.created_at}}</td>
                                 {% endfor %}
@@ -84,7 +84,7 @@
                     </div>
 
                     <div id="writing-div">
-                        <a href="{% url 'createpost' %}"><div id="writing-button">글쓰기</div></a>
+                        <a href="{% url 'createpost' cafe.id %}"><div id="writing-button">글쓰기</div></a>
                     </div>
 
                 </div>
