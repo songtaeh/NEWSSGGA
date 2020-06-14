@@ -1,0 +1,157 @@
+body{
+    background: white;
+  }
+
+.container{
+    width: 900px;
+    margin: 10px auto;
+}
+h1{
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.cafename{
+    display: flex;
+    height: 30px;
+    /* text-align: center; */
+}
+.cafename div{
+    flex: 0.2;
+    font-size: 20px;
+}
+.cafename form{
+    flex: 1;
+}
+
+.form_explain {
+    width: 636px;
+    height: 45px;
+    padding: 2px 0 0 4px;
+    border-top: 1px solid #c5c5c5;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: 1px solid #c5c5c5;
+    color: #424242;
+    line-height: 19px;
+    resize: vertical;
+}
+
+.form_title, .form_tag {
+    color: #323232;
+    font-size: 14px;
+    font-weight: bold;
+    width: 700px;
+    height: 26px;
+    padding: 3px 0 0 9px;
+    border-top: 1px solid #bbb;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    border-left: 1px solid #bbb;
+    background-color: thistle;
+    background: url(https://cafe.pstatic.net/img/section/bg_input.gif) repeat-x;
+    /* color: #9d9d9d; */
+    line-height: 15px;
+}
+
+.form_title {
+    margin-left: 41px;
+}
+
+.form_explain {
+    margin-left: 20px;
+}
+
+.form_tag {
+    margin-left: 57px;
+}
+
+.form_secret {
+    margin-left: 20px;
+}
+
+.form_image {
+    margin-left: 4px;
+    
+}
+/* .cafename input{
+    width: 700px;
+    height: 20px;
+    border: 2px solid #a29bfe;
+    border-radius: 10px;
+} */
+
+#submit_btn{
+    float: right;
+    border: 0;
+    width: 90px;
+    height: 40px;
+    color: white;
+    background-color : #a29bfe;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cafeinfo{
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(211, 212, 211);
+}
+/* .cafesearch{
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+} */
+/* .search{
+    flex: 0.2;
+}
+.cafesearch {
+    flex: 0.2;
+} */
+/* .searchform{
+    font-size: 10px;
+    color: rgb(102, 101, 101);
+    flex:1;
+} */
+/* .searchform form{
+    display: inline;
+}
+.searchform input{
+height: 20px;
+width: 600px;
+border: 2px solid #00B4CC;
+border-radius: 10px;
+margin-right: 20px;
+}
+.searchform button{
+    background-color: white;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+}
+.searchtag{
+    margin-top: 5px;
+    height: 100px;
+    background-color: rgb(211, 212, 211);
+} */
+
+
+/* .cafepers{ 
+    display: flex;
+    margin-top: 20px;
+}
+.cafepers div{
+    flex: 0.2;
+    font-size: 20px;
+}
+.submit{
+    margin-top: 20px;
+    text-align: center;
+}
+.submit input{
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+} */
