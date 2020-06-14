@@ -51,7 +51,7 @@ urlpatterns = [
     path('cafe_main/<int:cafe_id>',cafe_main,name="cafe_main"),
     # path('cafe_main_admin/',cafe_main_admin,name="cafe_main_admin"),
     path('cafe_setting/',cafe_setting,name="cafe_setting"),
-    path('bulletinboard_page/',bulletinboard_page,name="bulletinboard_page"),
+    path('bulletinboard_page/<int:cafe_id>/',bulletinboard_page,name="bulletinboard_page"),
     # path('mypost/', mypost, name="mypost_page"),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
