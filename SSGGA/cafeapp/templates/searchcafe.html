@@ -1,0 +1,54 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCHCAFE</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/searchcafe.css'%}">
+</head>
+<body>
+    <!-- login버튼 및 nav? -->
+    <div class="nav">
+        <div class="SSGGAlogo">
+            <a href="{%url 'mainpage'%}"><img id="ssgga" src="/static/img/logo.png" alt="SSGGA"></a>
+        </div>
+        <div class="login">
+            {%if user.is_authenticated%}
+            <p>{{user}}님 안녕하세요</p>
+            <a href="{%url 'logout' %}">
+                <button id="login">로그아웃</button>
+            </a>
+            {%else%}
+                <a href="{%url 'login'%}">
+                    <button id="login">로그인</button>
+                </a>
+            {%endif%}
+        </div>
+    </div>
+    <!-- 검색창 -->
+    <div class="wrap">
+        <div class="search">            
+            <form method="get" action="{%url 'searchcafe'%}">
+                <input type="text" class="searchTerm" placeholder="카페명을 검색해주세요" aria-label="Search" name = "b" value="{{b}}">
+                <button type="submit" class="searchButton">
+                    <img id="search-icon" src="\static\img\searchimg.png" alt="search">
+                </button>
+            </form>     
+        </div>
+     </div>
+     <h2>입력 검색어 : {{b.title}}</h2>
+
+     <!-- 카페 이름(clss=cafe_1) 및 설명(exp_1) -->
+    {%for b in searchcafe%}
+        <div class="cafe">
+            <a href="{%url 'cafe_main' b.id%}">
+                <div class="first">
+                    <div class="cafe_1"><img id="cafe_img" src="{{b.image.url}}"></div>
+                    <div class="exp_1"> <h4>{{b.title}}</h4><h5>{{b.explain}}</h5><h6>관리자 : {{b.adminuser}} &nbsp&nbsp&nbsp&nbsp&nbsp* http://127.0.0.1:8000/cafe_main/{{b.id}}</h6></div>
+                </div>
+            </a>
+        </div>
+    {%endfor%}
+</body>
+</html>

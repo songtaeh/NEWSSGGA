@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/update_profile.css' %}">
+</head>
+
+<body>
+    <div class=container>
+        <h1>SSGGA</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for i in profileform %}
+            <div>{{i.label}}</div>
+            {{i}}
+            {{i.errors}}
+            {% endfor %}
+            
+            <input type="submit" value="회원가입" id="register_btn">
+        </form>
+    </div>
+</body>
+
+</html>

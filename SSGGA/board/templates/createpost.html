@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CafeMain-Admin</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/create.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cafe_main.css' %}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="nav-bar">
+            <a href="{% url 'mainpage' %}"><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
+            <div id="nav-menu">
+                <a href="" id="profile">Profile</a>
+<<<<<<< HEAD
+                
+                {%if user.is_authenticated%}
+                <a href="{% url 'logout' %}" id="log_out">Log Out</a>
+                {%else%}
+                <a href="{% url 'login' %}" id="log_in">Log In</a>
+                {%endif%}
+=======
+                <a href="{% url 'logout' %}" id="log-out">Log Out</a>
+>>>>>>> 360a4dd4a3ce7b071792599ec5d0d8fdabf8d3ad
+            </div>
+        </div>
+
+        <a href="./cafe_main.html">
+            <div id="main-banner">메인 배너</div>
+        </a>
+
+        <div id="content-area">
+
+            <div id="menu-group">
+                <div id="info-menu-container">
+                    <div id="my-info">
+                        {%if user.is_authenticated%}
+                        <div id="my-picture">
+                            <img src="{{ profile.image.url }}" alt="user-img" id="my-picture-size">
+                            <h3 id="nick-name">{{ profile.nickname }}</h3>
+                        </div>
+                        {%else%}
+                        <div id="my-picture">
+                            <img src="/static/img/user_default_img.png" alt="user-img" id="my-picture-size">
+                            <h3 id="nick-name">익명</h3>
+                        </div>
+                        {%endif%}
+                    </div>
+                    <div id="my-menu-container">
+                        <div class="my-menu"><a href="">내가 쓴 글</a></div>
+                        <div class="my-menu"><a href="">댓글 단 글</a></div>
+                        <div class="my-menu"><a href="">내 스크랩</a></div>
+                    </div>
+                </div>
+                <div id="menu-container">
+                    <div class="cafe-menu">
+                        <ul id="favorite-menu"><a href="">즐겨찾는 게시판</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">전체글보기</a></ul>
+                    </div>
+                    <div class="cafe-menu">
+                        <ul><a href="">자유게시판</a></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main-group">
+                <div id="wrap">
+                    <div id="bulletin_title">
+                        게시판 이름
+                    </div>
+
+                    <form action="" method="post" enctype="multipart/form-data" name="">
+                        {% csrf_token %}
+                        <table id="table">
+                            <div id="info">
+                                <tr>
+                                    <th>닉네임: </th>
+                                    <td><input id="nickname" type="text" placeholder="닉네임" name="nickname" /></td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호: </th>
+                                    <td><input id="password" type="password" placeholder="비밀번호" name="password" /></td>
+                                </tr>
+                            </div>
+                        </table>
+
+                        <div id="writing">
+                            <p id="title_container">
+                                <input id="title" type="text" placeholder="글 제목" name="title">
+                            </p>
+                            <p id="content_container">
+                                <textarea id="content" rows="5" cols="30" name="contents"
+                                    placeholder="여기를 눌러서 글을 작성할 수 있습니다."></textarea>
+                            </p>
+                            <p id="buttom">
+                                <input type="file" name="FileName">
+                                <input id="submit" type="submit" name="submit" value="작성">
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
