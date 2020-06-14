@@ -133,22 +133,34 @@ def cafe_setting(request, cafe_id):
         return redirect("cafe_main", cafe_id)
 
 def bulletinboard_page(request, cafe_id):
+    try:
+        user = request.user
+        profile = user.profile
 
-    all_post = Board.objects.all()
+        all_post = Board.objects.all()
 
-    user = request.user
-    profile = user.profile
+        banner_image = load_banner_img()
 
-    banner_image = load_banner_img()
+        cafe = Cafe.objects.get(pk=cafe_id)
 
-    cafe = Cafe.objects.get(pk=cafe_id)
+        return render(request, 'bulletinboard_page.html', {
+            'all_post': all_post,
+            'profile': profile,
+            'banner_image' : banner_image,
+            'cafe':cafe,
+        })
+    except:
+        all_post = Board.objects.all()
 
-    return render(request, 'bulletinboard_page.html', {
-        'all_post': all_post,
-        'profile': profile,
-        'banner_image' : banner_image,
-        'cafe':cafe,
-    })
+        banner_image = load_banner_img()
+
+        cafe = Cafe.objects.get(pk=cafe_id)
+
+        return render(request, 'bulletinboard_page.html', {
+            'all_post': all_post,
+            'banner_image' : banner_image,
+            'cafe':cafe,
+        })
 
 # def mypost(request):
 #     posts = Board.objects.all()

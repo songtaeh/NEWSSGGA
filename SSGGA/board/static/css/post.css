@@ -80,20 +80,19 @@
     color: black;
 }
 
-/* #my-info {
-    height: 200px;
-    box-sizing: border-box;
-} */
+#my-info {
+    margin-bottom: 50px;
+}
 
 #my-menu-continer {
     height: 100px;
     box-sizing: border-box;
+    margin-top: 70px;
 }
 
 #menu-container {
     /* background-color: lightgreen; */
     box-sizing: border-box;
-    margin-top: 10px;
 }
 
 .cafe-menu ul{
