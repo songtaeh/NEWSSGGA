@@ -80,33 +80,19 @@
     color: black;
 }
 
-<<<<<<< HEAD
 #my-info {
     margin-bottom: 50px;
 }
-=======
-/* #my-info {
-    height: 200px;
-    box-sizing: border-box;
-} */
->>>>>>> 4eb8092ecd1d1a443d70caa3c0a97f6061945c89
 
 #my-menu-continer {
     height: 100px;
     box-sizing: border-box;
-<<<<<<< HEAD
     margin-top: 70px;
-=======
->>>>>>> 4eb8092ecd1d1a443d70caa3c0a97f6061945c89
 }
 
 #menu-container {
     /* background-color: lightgreen; */
     box-sizing: border-box;
-<<<<<<< HEAD
-=======
-    margin-top: 10px;
->>>>>>> 4eb8092ecd1d1a443d70caa3c0a97f6061945c89
 }
 
 .cafe-menu ul{
