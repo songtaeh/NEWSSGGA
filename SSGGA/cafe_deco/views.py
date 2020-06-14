@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BannerForm
 from .models import BannerImage
 from board.models import Board
@@ -21,17 +21,14 @@ def cafe_main(request, cafe_id):
         ## 요까지
 
         all_post = Board.objects.all()
-        image_obj = BannerImage.objects.last()
-
-        if image_obj:
-            url = image_obj.image.url
-        else:
-            url = ""
 
         thisuser = request.user
 
-        cafe = Cafe.objects.get(pk=cafe_id)
+        cafe = get_object_or_404(Cafe, pk=cafe_id)
         adminuser = cafe.adminuser
+
+        image_obj = BannerImage.objects.filter(cafe=cafe).last()
+        url = image_obj.image.url if image_obj else ""
 
         if thisuser==adminuser:
             isAdmin = True
@@ -40,7 +37,7 @@ def cafe_main(request, cafe_id):
 
         context ={'image': url, 'isAdmin':isAdmin, 'profile':profile, 'all_post':all_post, 'cafe':cafe}
 
-    except:
+    except Exception:
         # user 정보 없으면 걍 받지말기
 
         all_post = Board.objects.all()
@@ -87,12 +84,12 @@ def cafe_setting(request, cafe_id):
         })
     elif request.method == "POST":
         banner_form = BannerForm(request.POST, request.FILES)
+        cafe = get_object_or_404(Cafe, pk=cafe_id)
+
         if banner_form.is_valid:
-            banner_form.save()
-
-        user_info = Profile.objects.all()
-
-        all_post = Board.objects.all()
+            banner = banner_form.save()
+            banner.cafe = cafe
+            banner.save()
         
         return redirect("cafe_main", cafe_id)
 
