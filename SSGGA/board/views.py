@@ -26,8 +26,8 @@ def createpost(request, cafe_id):
         
         all_post = BoardForm(request.POST)
 
-        image_obj = BannerImage.objects.filter(cafe=cafe).last()
-        url = image_obj.image.url if image_obj else ""
+        # image_obj = BannerImage.objects.filter(cafe=cafe).last()
+        # url = image_obj.image.url if image_obj else ""
 
         if all_post.is_valid():
             temp = all_post.save(commit=False)
@@ -38,13 +38,13 @@ def createpost(request, cafe_id):
 
         all_post = BoardForm(request.GET)
 
-        context = {'image':url, 'all_post':all_post, 'profile':profile}
+        context = {all_post':all_post, 'profile':profile}
         return render(request, 'createpost.html', context)
     except:
         all_post = BoardForm(request.POST)
 
-        image_obj = BannerImage.objects.filter(cafe=cafe).last()
-        url = image_obj.image.url if image_obj else ""
+        # image_obj = BannerImage.objects.filter(cafe=cafe).last()
+        # url = image_obj.image.url if image_obj else ""
 
         if all_post.is_valid():
             temp = all_post.save(commit=False)
@@ -55,7 +55,7 @@ def createpost(request, cafe_id):
 
         all_post = BoardForm(request.GET)
 
-        context = {'image':url, 'all_post':all_post}
+        context = {all_post':all_post}
         return render(request, 'createpost.html', context)
 
 def deletepost(request, cafe_id, post_id):
@@ -70,8 +70,8 @@ def update(request, cafe_id, post_id):
         user = request.user
         profile = user.profile
 
-        image_obj = BannerImage.objects.filter(cafe=cafe).last()
-        url = image_obj.image.url if image_obj else ""
+        # image_obj = BannerImage.objects.filter(cafe=cafe).last()
+        # url = image_obj.image.url if image_obj else ""
 
         my_post = Board.objects.get(pk=post_id)
         if request.method == "POST":
@@ -85,10 +85,10 @@ def update(request, cafe_id, post_id):
         # object를 안에다가 넣어준다
         update_form = BoardForm(instance=my_post)
 
-        return render(request, 'update.html', {'image':url, 'update_form': update_form, 'my_post': my_post, 'profile':profile})    
+        return render(request, 'update.html', {update_form': update_form, 'my_post': my_post, 'profile':profile})    
     except:
-        image_obj = BannerImage.objects.filter(cafe=cafe).last()
-        url = image_obj.image.url if image_obj else ""
+        # image_obj = BannerImage.objects.filter(cafe=cafe).last()
+        # url = image_obj.image.url if image_obj else ""
 
         my_post = Board.objects.get(pk=post_id)
         if request.method == "POST":
@@ -101,7 +101,7 @@ def update(request, cafe_id, post_id):
         # object를 안에다가 넣어준다
         update_form = BoardForm(instance=my_post)
 
-        return render(request, 'update.html', {'image':url, 'update_form': update_form, 'my_post': my_post})    
+        return render(request, 'update.html', {update_form': update_form, 'my_post': my_post})    
 
 # def board(request):
 
