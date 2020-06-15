@@ -109,7 +109,7 @@ def bulletinboard_page(request, cafe_id):
         else:
             isAdmin = False
 
-        context ={'image': url, 'isAdmin':isAdmin, 'profile':profile, 'all_post':all_post, 'cafe_id':cafe_id}
+        context ={'image': url, 'isAdmin':isAdmin, 'profile':profile, 'all_post':all_post, 'cafe':cafe}
 
     except:
         # user 정보 없으면 걍 받지말기
