@@ -31,7 +31,7 @@ def cafe_main(request, cafe_id):
         image_obj = BannerImage.objects.filter(cafe=cafe).last()
         url = image_obj.image.url if image_obj else ""
 
-        if thisuser==adminuser:
+        if user==adminuser:
             isAdmin = True
         else:
             isAdmin = False
