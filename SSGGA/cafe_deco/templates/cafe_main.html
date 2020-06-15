@@ -18,7 +18,7 @@
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
                 {% if isAdmin %}
-                <a href="{% url 'cafe_setting' cafe_id=cafe.id %}" id="profile">Setting</a>
+                <a href="{% url 'cafe_setting' cafe.id %}" id="profile">Setting</a>
                 {% endif %}
 
                 {%if user.is_authenticated%}
