@@ -104,7 +104,7 @@ def update(request, cafe_id, post_id):
         return render(request, 'update.html', {'update_form': update_form, 'my_post': my_post})    
 
 # def board(request):
-
+######
 #     return render(request, 'board.html')    
 
 def post(request, cafe_id, post_id):
