@@ -56,7 +56,7 @@
 #my-picture {
     width: 100px;
     height: 100px;
-    background-color: lime;
+    /* background-color: lime; */
     margin: 20px auto;
     text-align: center;
 }

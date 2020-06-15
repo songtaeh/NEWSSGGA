@@ -63,6 +63,7 @@ def update(request, cafe_id, post_id):
     try:
         user = request.user
         profile = user.profile
+        print(profile)
 
         my_post = Board.objects.get(pk=post_id)
         if request.method == "POST":

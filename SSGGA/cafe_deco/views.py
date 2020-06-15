@@ -19,6 +19,7 @@ def cafe_main(request, cafe_id):
         # user정보 받기
         user = request.user
         profile = user.profile
+        print(profile)
         ## 요까지
 
         cafe = Cafe.objects.get(pk=cafe_id)
