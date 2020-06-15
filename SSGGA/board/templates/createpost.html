@@ -17,16 +17,12 @@
             <a href="{% url 'mainpage' %}"><img src="{% static 'img/logo.png' %}" alt="SSGGA" id="logo"></a>
             <div id="nav-menu">
                 <a href="" id="profile">Profile</a>
-<<<<<<< HEAD
                 
                 {%if user.is_authenticated%}
                 <a href="{% url 'logout' %}" id="log_out">Log Out</a>
                 {%else%}
                 <a href="{% url 'login' %}" id="log_in">Log In</a>
                 {%endif%}
-=======
-                <a href="{% url 'logout' %}" id="log-out">Log Out</a>
->>>>>>> 360a4dd4a3ce7b071792599ec5d0d8fdabf8d3ad
             </div>
         </div>
 

@@ -85,11 +85,12 @@
                                 <td class="writer">관리자</td>
                                 <td class="writed-date">-</td>
                                 {% for post in all_post %}
-                                    <tr class="content-table">
+                                <tr class="content-table">
                                     <td class="number">{{post.id}} </td>
                                     <td class="article-title"><a href="{% url 'post' cafe.id post.id %}">{{post.title}}</a></td>
                                     <td class="writer">{{post.nickname}}</td>
                                     <td class="writed-date">{{post.created_at}}</td>
+                                </tr>
                                 {% endfor %}
                             </tbody>
                         </table>

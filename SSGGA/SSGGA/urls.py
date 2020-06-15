@@ -20,7 +20,7 @@ from myapp.views import mainpage
 from cafeapp.views import createcafe, searchcafe
 from account.views import signup, update_profile
 from cafe_deco.views import cafe_main, cafe_setting, bulletinboard_page
-from board.views import createpost, post, deletepost, update
+from board.views import createpost, deletepost, update, post
 from django.contrib.auth.views import LoginView, LogoutView
 
 from django.conf import settings

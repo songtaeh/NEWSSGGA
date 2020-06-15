@@ -57,10 +57,11 @@
         </div>
 
         <div id="cafe-real-container">
+
             {%for d in mycafe%}
             <a href="{% url 'cafe_main' d.id %}">
                 <div class="cafe-real">
-                    <img id="cafe_icon" src={{d.image.url}}>
+                    <img id="cafe_icon" name="cafe_icon" src={{d.cafe_icon.url}}>
                 </div>
             </a>
             {%endfor%}

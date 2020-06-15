@@ -5,7 +5,7 @@ class CafeForm(forms.ModelForm):
     
     class Meta:
         model = Cafe
-        fields = ['title', 'explain', 'tag', 'secret', 'image']
+        fields = ['title', 'explain', 'tag', 'secret', 'cafe_icon']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -15,7 +15,7 @@ class CafeForm(forms.ModelForm):
             'cols': 30})
 
         self.fields['title'].label = "카페명 "
-        self.fields['image'].label = "카페 아이콘 "
+        self.fields['cafe_icon'].label = "카페 아이콘 "
         self.fields['explain'].label = "카페 설명 "
         self.fields['secret'].label = "공개 여부 "
         self.fields['tag'].label = "태그 "
@@ -27,7 +27,7 @@ class CafeForm(forms.ModelForm):
         self.fields['secret'].widget.attrs.update({
             'class': "form_secret"
         })       
-        self.fields['image'].widget.attrs.update({
+        self.fields['cafe_icon'].widget.attrs.update({
             'class': "form_image"})  
 
 

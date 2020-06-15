@@ -7,13 +7,16 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def createcafe(request):
     if request.method == "POST":
-        cafeform = CafeForm(request.POST or None)
+        cafeform = CafeForm(request.POST, request.FILES)
         print(cafeform.errors)
         if cafeform.is_valid():
             print(cafeform.errors)
             temp = cafeform.save(commit=False)  # 저장 잠깐 지연
             temp.adminuser = request.user   # user정보 받아오기
-            temp.save() # 저장하기
+            
+            temp.save()
+
+            # temp.save() # 저장하기
             return redirect('mainpage')
     cafeform = CafeForm()
 
