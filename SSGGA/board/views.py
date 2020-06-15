@@ -116,17 +116,14 @@ def post(request, cafe_id, post_id):
         
         my_post = Board.objects.get(pk=post_id)
 
-        image_obj = BannerImage.objects.filter(cafe=cafe).last()
-        url = image_obj.image.url if image_obj else ""
+        # image_obj = BannerImage.objects.filter(cafe=cafe).last()
+        # url = image_obj.image.url if image_obj else ""
 
 
-        return render(request, 'post.html', {'image':url, 'my_post':my_post, 'cafe':cafe, 'profile':profile})
+        return render(request, 'post.html', {'my_post':my_post, 'cafe':cafe, 'profile':profile})
     except:
         cafe = Cafe.objects.get(pk=cafe_id)
         
         my_post = Board.objects.get(pk=post_id)
 
-        image_obj = BannerImage.objects.filter(cafe=cafe).last()
-        url = image_obj.image.url if image_obj else ""
-
-        return render(request, 'post.html', {'image':url, 'my_post':my_post, 'cafe':cafe})
+        return render(request, 'post.html', {'my_post':my_post, 'cafe':cafe})
